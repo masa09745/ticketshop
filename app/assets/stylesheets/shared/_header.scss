@@ -1,0 +1,38 @@
+.header-main{
+  height: 100px;
+  background-color: #fff;
+  box-shadow: 0 3px 3px 0 #bdbdbd;
+  font-family: "bananaslip";
+  .header-inner{
+    max-width: 1020px;
+    margin: 0 auto;
+    padding-top: 5px;
+    &__upr{
+      display: flex;
+      &__logo{
+        font-size: 35px;
+        color: #0277bd;
+      }
+    }
+    &__lwr{
+      display: flex;
+      justify-content: space-between;
+      height: 41px;
+      margin-top: 5px;
+
+      &__left{
+        font-size: 20px;
+        line-height: 30px;
+        margin-left: 10px;
+      }
+      &__right{
+        display: flex;
+        font-size: 20px;
+        line-height: 30px;
+        &__login{
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
