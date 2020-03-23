@@ -1,6 +1,8 @@
 @import 'modules/tickets';
-@import 'shared/header';
+@import 'shared/header_main';
+@import 'shared/header_user';
 @import 'config/reset';
+@import 'modules/new';
 
 *{
   text-decoration: none;
