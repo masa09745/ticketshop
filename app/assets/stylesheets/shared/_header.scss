@@ -29,7 +29,7 @@
         display: flex;
         font-size: 20px;
         line-height: 30px;
-        &__login{
+        &__login, &__logout{
           margin-left: 15px;
         }
       }

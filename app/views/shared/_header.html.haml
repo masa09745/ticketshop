@@ -9,7 +9,13 @@
         =link_to "", class:"heaxer-inner__lwr__left__category" do
           カテゴリーから探す
       .header-inner__lwr__right
-        .header-inner__lwr__right__new
-          新規登録
-        .header-inner__lwr__right__login
-          Login
+        -if user_signed_in?
+          .header-inner__lwr__right__mypage
+            マイページ
+          =link_to destroy_user_session_path, method: :delete, class:"header-inner__lwr__right__logout" do
+            ログアウト
+        -else
+          =link_to new_user_registration_path,class:"header-inner__lwr__right__new" do
+            新規登録
+          =link_to new_user_session_path, class:"header-inner__lwr__right__login" do
+            Login
