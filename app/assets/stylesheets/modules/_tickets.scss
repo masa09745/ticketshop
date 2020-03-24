@@ -1,4 +1,21 @@
-.ticktet-content{
-  width: 750px;
-  background-color: #f6f6f6;
+.ticktet-wrapper{
+  font-family: "bananaslip";
+  .ticket-inner{
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 30px;
+    &__top{
+      height: 75px;
+      span{
+        font-size: 20px;
+        margin: 0 15px;
+      }
+    }
+    &__month, &__other{
+      span{
+        font-size: 20px;
+
+      }
+    }
+  }
 }
