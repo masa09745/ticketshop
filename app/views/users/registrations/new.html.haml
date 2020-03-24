@@ -1,0 +1,41 @@
+.signup-wrapper
+  = render "users/shared/header_user"
+  .signup-main
+    %span.signup-title 新規登録
+    .signup-inner
+      .signup-form
+        %form.signup-user.s12
+          .signup-user__inner.row
+            .input-field.col.s6
+              %i.material-icons.prefix account_circle
+              %input#username.validate{type:"text"}
+              %label{for:"name"} 氏名
+          .signup-user__inner.row
+            .input-field.col.s6
+              %i.material-icons.prefix account_circle
+              %input#username_kana.validate{type: "text"}
+              %label{for:"username_kana"} 氏名(カナ)
+          .signup-user__inner.row
+            .input-field.col.s6
+              %i.material-icons.prefix email
+              %input#email.validate{type: "email"}
+              %label{for:"email"} メールアドレス
+          .signup-user__inner.row
+            .input-field.col.s4
+              %i.material-icons.prefix lock_outline
+              %input#password.validate{type: "password",autocomplete:"new-password"}
+              %label{:for => "password"} パスワード
+          .signup-user__inner.row
+            .input-field.col.s4
+              %i.material-icons.prefix lock_outline
+              %input#current-password.validate{type: "password",autocomplete:"current-password"}
+              %label{:for => "current-password"} パスワード再確認
+          .signup-user__button
+            %a.waves-effect.waves-light.btn-large.indigo 次へ
+  = render "users/shared/footer_user"
+
+
+
+
+
+
