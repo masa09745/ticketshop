@@ -1,10 +1,10 @@
-.signup-wrapper{
+.signup-wrapper, .signin-wrapper{
   background-color: #f5f5f5;
-  .signup-main{
+  .signup-main, .signin-main{
     width: 700px;
     margin: 20px auto;
     background-color: #fff;
-    .signup-title{
+    .signup-title, .signin-title{
       font-size: 35px;
       display: inline-block;
       text-align: center;
@@ -12,7 +12,7 @@
       padding: 20px 30px;
       font-family: "bananaslip";
     }
-    .signup-inner{
+    .signup-inner, .signin-inner{
       padding: 20px 30px;
     }
   }
