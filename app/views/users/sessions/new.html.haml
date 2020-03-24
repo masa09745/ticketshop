@@ -1,19 +1,20 @@
-.signup-main
-
-  %h2 Log
-  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    .field
-      = f.label :email
-      %br/
-      = f.email_field :email, autofocus: true, autocomplete: "email"
-    .field
-      = f.label :password
-      %br/
-      = f.password_field :password, autocomplete: "current-password"
-    - if devise_mapping.rememberable?
-      .field
-        = f.check_box :remember_me
-        = f.label :remember_me
-    .actions
-      = f.submit "Log in"
-  = render "devise/shared/links"
+.signin-wrapper
+  = render "users/shared/header_user"
+  .signin-main
+    %span.signin-title ログイン
+    .signin-inner
+      .signin-form
+        %form.signin-user.s12
+          .signin-user__inner.row
+            .input-field.col.s6
+              %i.material-icons.prefix email
+              %input#email.validate{type: "email"}
+              %label{for:"email"} メールアドレス
+          .signin-user__inner.row
+            .input-field.col.s4
+              %i.material-icons.prefix lock_outline
+              %input#password.validate{type: "password",autocomplete:"new-password"}
+              %label{:for => "password"} パスワード
+          .signin-user__button
+            %a.waves-effect.waves-light.btn-large.indigo ログイン
+  = render "users/shared/footer_user"
