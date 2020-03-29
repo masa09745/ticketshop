@@ -5,7 +5,16 @@
       %span スケジュール一覧
       %span スタジアム一覧
 
+    .ticket-inner__weeks
+      %span 最近の試合
+      .calender
+        = week_calendar number_of_weeks: 2 do |date|
+          = date.day
+
+
     .ticket-inner__month
-      %span 今月の試合
-    .ticket-inner__other
       %span その他の試合
+      .calender
+        = month_calendar do |date|
+          = date.day
+
