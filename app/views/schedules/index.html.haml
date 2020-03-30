@@ -1,21 +1,18 @@
 = render "shared/header_main"
-.ticktet-wrapper
-  .ticket-inner
-    .ticket-inner__top
-      =link_to schedules_path do
-        %span スケジュール一覧
+.schedule-wrapper
+  .schedule-inner
+    .schedule-inner__top
       %span スタジアム一覧
 
-    .ticket-inner__weeks
+    .schedule-inner__weeks
       %span 最近の試合
       .calender
         = week_calendar number_of_weeks: 2 do |date|
           = date.day
 
 
-    .ticket-inner__month
+    .schedule-inner__month
       %span その他の試合
       .calender
         = month_calendar do |date|
           = date.day
-
