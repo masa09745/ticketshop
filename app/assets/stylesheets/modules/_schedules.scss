@@ -1,0 +1,29 @@
+.schedule-wrapper{
+  font-family: "bananaslip";
+  .schedule-inner{
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 30px;
+    &__top{
+      height: 75px;
+      span{
+        font-size: 20px;
+        margin: 0 15px;
+      }
+    }
+    &__weeks, &__month{
+      span{
+        font-size: 20px;
+      }
+      .calender{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      .simple-calendar {
+        .next-month {
+          background-color: #ffffff;
+        }
+      }
+      }
+    }
+  }
+}
