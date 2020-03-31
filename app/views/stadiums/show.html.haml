@@ -9,5 +9,15 @@
     .stadium-inner__contents
       .stadium-name
         %span Aスタジアム
-      .stadium-thumnail
-        = image_tag 'icon1.jpg', class: 'stadium-image'
+      .stadium-box
+        .stadium-box__thumbnail
+          = image_tag 'icon1.jpg', class: 'stadium-image', size:'400x550'
+        .stadium-box__text
+          .stadium-address
+            %span 住所
+            %p A県A市AA町xx-xx-xx
+          .stadium-access
+            %span アクセス
+            %p 〇〇駅からバスで15分
+          .stadium-notice
+            %p ※席種に関しましてはサムネイルにてご確認ください

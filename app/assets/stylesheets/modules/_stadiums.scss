@@ -41,6 +41,24 @@
           }
         }
       }
+      .stadium-box{
+        display: flex;
+        &__thumbnail{
+          width: 400px;
+          height: 550px;
+          margin-right: 50px;
+        }
+        &__text{
+          font-size: 25px;
+          .stadium-address, .stadium-access{
+            margin-bottom: 20px;
+          }
+          .stadium-notice{
+            padding-top: 30px;
+            font-size: 20px;
+          }
+        }
+      }
     }
   }
 }

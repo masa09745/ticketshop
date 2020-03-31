@@ -4,7 +4,8 @@
     .ticket-inner__top
       =link_to schedules_path do
         %span スケジュール一覧
-      %span スタジアム一覧
+      =link_to stadiums_path do
+        %span スタジアム一覧
 
     .ticket-inner__weeks
       %span 最近の試合
