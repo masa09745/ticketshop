@@ -1,0 +1,64 @@
+.stadium-wrapper{
+  font-family: "bananaslip";
+  .stadium-inner{
+    width: 960px;
+    margin: 0 auto;
+    padding: 30px;
+    &__top{
+      height: 75px;
+      span{
+        font-size: 20px;
+        margin: 15px;
+      }
+    }
+    &__contents{
+      padding: 30px;
+      .stadium-title, .stadium-name{
+        height: 45px;
+        margin: 15px 0;
+        span{
+        font-size: 30px;
+        }
+      }
+      .stadium-main{
+        display: flex;
+        flex-wrap: wrap;
+        .stadium-info{
+          width: 200px;
+          margin-top: 20px;
+          margin-right: 20px;
+          &__thumbnail{
+            width: 200px;
+            height: 200px;
+          }
+          &__text{
+            height: 30px;
+            padding: 5px;
+            font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic',
+            'メイリオ', 'Meiryo', sans-serif;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+      .stadium-box{
+        display: flex;
+        &__thumbnail{
+          width: 400px;
+          height: 550px;
+          margin-right: 50px;
+        }
+        &__text{
+          font-size: 25px;
+          .stadium-address, .stadium-access{
+            margin-bottom: 20px;
+          }
+          .stadium-notice{
+            padding-top: 30px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
