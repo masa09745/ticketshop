@@ -1,7 +1,7 @@
 .stadium-wrapper{
   font-family: "bananaslip";
   .stadium-inner{
-    max-width: 1020px;
+    width: 960px;
     margin: 0 auto;
     padding: 30px;
     &__top{
@@ -13,8 +13,9 @@
     }
     &__contents{
       padding: 30px;
-      .stadium-title{
+      .stadium-title, .stadium-name{
         height: 45px;
+        margin: 15px 0;
         span{
         font-size: 30px;
         }
@@ -22,10 +23,10 @@
       .stadium-main{
         display: flex;
         flex-wrap: wrap;
-      .stadium-info{
-        width: 200px;
-        margin-top: 20px;
-        margin-right: 20px;
+        .stadium-info{
+          width: 200px;
+          margin-top: 20px;
+          margin-right: 20px;
           &__thumbnail{
             width: 200px;
             height: 200px;

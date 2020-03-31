@@ -1,1 +1,13 @@
 = render "shared/header_main"
+.stadium-wrapper
+  .stadium-inner
+    .stadium-inner__top
+      =link_to schedules_path do
+        %span スケジュール一覧
+      =link_to stadiums_path do
+        %span スタジアム一覧
+    .stadium-inner__contents
+      .stadium-name
+        %span Aスタジアム
+      .stadium-thumnail
+        = image_tag 'icon1.jpg', class: 'stadium-image'
