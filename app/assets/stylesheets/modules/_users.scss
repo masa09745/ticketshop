@@ -1,0 +1,33 @@
+.user-wrapper{
+  background-color: #f5f5f5;
+  .user-inner{
+    width: 960px;
+    margin: auto;
+    padding: 50px;
+    display: flex;
+    &__side{
+      width: 350px;
+      margin-right: 50px;
+      background-color: #fff;
+      .mypage-side{
+        &__list{
+          li{
+            font-size: 14px;
+            padding: 20px;
+            border-bottom: 3px solid #f5f5f5;
+          }
+        }
+      }
+    }
+    &__main{
+    width: 850px;
+    background-color: #fff;
+    .mypage-main{
+      &__nickname{
+        padding: 25px;
+        border-bottom: 3px solid #f5f5f5;
+      }
+    }
+    }
+  }
+}
