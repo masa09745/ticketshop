@@ -1,0 +1,18 @@
+.user-wrapper{
+  width: 960px;
+  margin: 30px auto;
+  .user-inner{
+    display: flex;
+    &__side{
+      width: 200px;
+      .mypage-side{
+        padding: 15px;
+        &__list{
+          li{
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
