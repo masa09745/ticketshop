@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# coding: utf-8
+
+Stadium.create!(
+  [
+    {name:'Aスタジアム', image: open("#{Rails.root}/db/stadium/icon1.jpg")},
+    {name:'Bスタジアム', image: open("#{Rails.root}/db/stadium/icon1.jpg")},
+    {name:'Cスタジアム', image: open("#{Rails.root}/db/stadium/icon1.jpg")},
+    {name:'Dスタジアム', image: open("#{Rails.root}/db/stadium/icon1.jpg")},
+    {name:'Eスタジアム', image: open("#{Rails.root}/db/stadium/icon1.jpg")},
+    {name:'Fスタジアム', image: open("#{Rails.root}/db/stadium/icon1.jpg")}
+  ]
+)
+
