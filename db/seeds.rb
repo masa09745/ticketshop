@@ -9,12 +9,12 @@
 
 Stadium.create!(
   [
-    {name:'Aスタジアム', image:File.open("./app/assets/images/icon1.jpg")},
-    {name:'Bスタジアム', image:File.open("./app/assets/images/icon1.jpg")},
-    {name:'Cスタジアム', image:File.open("./app/assets/images/icon1.jpg")},
-    {name:'Dスタジアム', image:File.open("./app/assets/images/icon1.jpg")},
-    {name:'Eスタジアム', image:File.open("./app/assets/images/icon1.jpg")},
-    {name:'Fスタジアム', image:File.open("./app/assets/images/icon1.jpg")}
+    {name:'Aスタジアム', image: open("#{Rails.root}/db/stadium/icon1.jpg")},
+    {name:'Bスタジアム', image: open("#{Rails.root}/db/stadium/icon1.jpg")},
+    {name:'Cスタジアム', image: open("#{Rails.root}/db/stadium/icon1.jpg")},
+    {name:'Dスタジアム', image: open("#{Rails.root}/db/stadium/icon1.jpg")},
+    {name:'Eスタジアム', image: open("#{Rails.root}/db/stadium/icon1.jpg")},
+    {name:'Fスタジアム', image: open("#{Rails.root}/db/stadium/icon1.jpg")}
   ]
 )
 
