@@ -15,5 +15,9 @@
     .schedule-inner__month
       %span その他の試合
       .calender
-        = month_calendar do |date|
+        = month_calendar events: @matches do |date, matches|
           = date.day
+          - matches.each do |match|
+            .match-name
+              =link_to schedule_path(match) do
+                =match.match_name

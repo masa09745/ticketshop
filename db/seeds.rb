@@ -18,3 +18,19 @@ Stadium.create!(
   ]
 )
 
+Schedule.create!(
+  [
+    {match_name:'A VS B', match_date: '2020-04-01 18:00'},
+    {match_name:'C VS D', match_date: '2020-04-01 18:00'},
+    {match_name:'E VS F', match_date: '2020-04-01 18:00'},
+    {match_name:'A VS B', match_date: '2020-04-02 18:00'},
+    {match_name:'C VS D', match_date: '2020-04-02 18:00'},
+    {match_name:'E VS F', match_date: '2020-04-02 18:00'},
+    {match_name:'A VS B', match_date: '2020-04-03 18:00'},
+    {match_name:'C VS D', match_date: '2020-04-03 18:00'},
+    {match_name:'E VS F', match_date: '2020-04-03 18:00'}
+
+  ]
+
+)
+
