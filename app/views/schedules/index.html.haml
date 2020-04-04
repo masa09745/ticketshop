@@ -12,8 +12,8 @@
           = date.day
           - matches.each do |match|
             .match-name
-              =link_to schedule_path(match) do
-                =match.match_name
+              = link_to schedule_path(match) do
+                = match.match_name
 
 
     .schedule-inner__month
@@ -23,5 +23,5 @@
           = date.day
           - matches.each do |match|
             .match-name
-              =link_to schedule_path(match) do
-                =match.match_name
+              = link_to schedule_path(match) do
+                = match.match_name

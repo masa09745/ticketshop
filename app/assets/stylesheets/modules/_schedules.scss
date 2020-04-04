@@ -22,6 +22,19 @@
         .next-month {
           background-color: #ffffff;
         }
+        .prev-month {
+          .match-name{
+            display: none;
+          }
+        }
+        .past{
+          .match-name{
+            a{
+            color: #dddddd;
+            text-decoration: none;
+           }
+          }
+        }
       }
       }
     }
