@@ -8,6 +8,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user = User.new
   end
 
+  def credit
+  end
+
   # POST /resource
   # def create
   #   super
