@@ -6,28 +6,33 @@
       %form.signup-user.s12
         .signup-user__inner.row
           .credit-number
+            %i.material-icons.prefix credit_card
             %label カード番号
             %span.must 必須
           .input-field.col.s6
-            %i.material-icons.prefix credit_card
             %input#credit-number.credit-number{type:"text"}
         .signup-user__inner.row
           .credit-limit
+            %i.material-icons.prefix date_range
             %label 有効期限
             %span.must 必須
           .input-field.col.s2
-            %select
-              %option{:disabled => "disabled", :selected => "selected", :value => ""} Month
-                = ('01'..'12').each do |month|
-                  %option{value: month}
-                    =month
+            %input#credit-month.credit-month{type:"text"}
+            %label Month
           .input-field.col.s2
-            %select
-              %option{:disabled => "disabled", :selected => "selected", :value => ""} Year
-              %option{:value => "1"} Option 1
-              %option{:value => "2"} Option 2
-              %option{:value => "3"} Option 3
-
+            %input#credit-year.credit-year{type:"text"}
+            %label Year
+        .signup-user__inner.row
+          .credit-cvc
+            %i.material-icons.prefix lock_outline
+            %label セキュリティコード
+            %span.must 必須
+          .input-field.col.s2
+            %input#credit-code.credit-code{type:"text"}
+            %label CVC
+        .signup-user__button
+          = link_to users_sign_up_credit_path, class:"waves-effectv waves-light btn-large indigo" do
+            次へ
 
 
 
