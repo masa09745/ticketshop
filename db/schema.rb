@@ -13,8 +13,9 @@
 ActiveRecord::Schema.define(version: 2020_04_03_030535) do
 
   create_table "schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "match_date", null: false
     t.string "match_name", null: false
+    t.date "match_date", null: false
+    t.time "start_time", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

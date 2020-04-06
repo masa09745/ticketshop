@@ -9,10 +9,11 @@
 
     .ticket-inner__weeks
       %span 最近の試合
-      .calender
-        = week_calendar number_of_weeks: 2 do |date|
-          = date.day
-
+      - @matches.each do |match|
+        .match-date
+          = match.match_date
+        .match-name
+          = match.match_name
 
     .ticket-inner__month
       %span その他の試合
