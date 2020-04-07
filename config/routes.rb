@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :tickets
   resources :schedules,:stadiums, only: [:index, :show]
 
+
   scope :mypage do
     resources :users, only: [:show]
   end

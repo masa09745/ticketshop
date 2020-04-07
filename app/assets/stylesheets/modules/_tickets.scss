@@ -18,14 +18,25 @@
       .calender{
       margin-top: 20px;
       margin-bottom: 20px;
-      .simple-calendar {
-        .next-month {
-          background-color: #ffffff;
-        }
-        .prev-month {
+        .simple-calendar {
+          .next-month {
+            background-color: #ffffff;
+          }
+          .prev-month {
           
+          }
         }
       }
+    }
+    &__weeks{
+      margin-bottom: 35px;
+      .match-box{
+        display: flex;
+        height: 90px;
+        padding: 10px 5px;
+        &__inner{
+          margin-right: 20px;
+        }
       }
     }
   }
