@@ -23,8 +23,12 @@
     .ticket-inner__month
       %span その他の試合
       .calender
-        = month_calendar do |date|
+        = week_calendar number_of_weeks: 2, events: @fullmatches do |date, fullmatches|
           = date.day
+          - fullmatches.each do |fullmatch|
+            .match-name
+              = link_to schedule_path(fullmatch) do
+                = fullmatch.match_name
 = render "shared/footer_main"
 
 

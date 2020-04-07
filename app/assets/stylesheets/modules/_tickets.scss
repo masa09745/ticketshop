@@ -1,7 +1,7 @@
 .ticktet-wrapper{
   font-family: "bananaslip";
   .ticket-inner{
-    max-width: 960px;
+    max-width: 1020px;
     margin: 0 auto;
     padding: 30px;
     &__top{
@@ -22,8 +22,13 @@
           .next-month {
             background-color: #ffffff;
           }
-          .prev-month {
-          
+          .past{
+            .match-name{
+              a{
+              color: #dddddd;
+              text-decoration: none;
+             }
+            }
           }
         }
       }
