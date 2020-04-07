@@ -11,7 +11,8 @@
       %span 最近の試合
       - @matches.each do |match|
         .match-date
-          = match.match_date
+          = match.match_date.strftime("%m月 %d日") 
+        .match-time
         .match-name
           = match.match_name
 
