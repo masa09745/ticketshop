@@ -29,10 +29,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
       password_confirmation: session[:password_confirmation]
     )
     if @user.save
+      user = @user
       session[:id] = @user.id
+      sign_in User.find(session[:id]) unless user_signed_in?
       redirect_to root_path
+      session.clear
     else
-      render '/signup/registration'
+      render '/users/signup'
     end
   end
 
@@ -46,5 +49,4 @@ class Users::RegistrationsController < Devise::RegistrationsController
       :password_confirmation
     )
   end
-
 end
