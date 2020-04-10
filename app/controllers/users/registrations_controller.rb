@@ -14,20 +14,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
     session[:email] = user_params[:email]
     session[:password] = user_params[:password]
     session[:password_confirmation] = user_params[:password_confirmation]
-    @user = User.new 
+    @user = User.new
   end
 
   def confirmation
-    @user[:user][:name] = session[:user]["name"]
-    @user[:user][:name_kana] = session[:user]["name_kana"]
-    @user[:user][:email] = session[:user]["email"]
-
   end
 
   def create
     @user = User.new(
       name: session[:name],
-      name: session[:name_kana],
+      name_kana: session[:name_kana],
       email: session[:email],
       password: session[:password],
       password_confirmation: session[:password_confirmation]

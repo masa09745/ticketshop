@@ -3,7 +3,7 @@
   .signup-main
     %span.signup-title 新規登録
     .signup-inner
-      = form_with model: @user, url: users_sign_up_credit_path, id: 'new_user', class: 'signup-user s12', local: true do |f|
+      = form_with model: @user, url: users_sign_up_credit_path, method: :get, id: 'new_user', class: 'signup-user s12', local: true do |f|
         .signup-user__inner.row
           .input-field.col.s6
             %i.material-icons.prefix account_circle
@@ -30,8 +30,7 @@
             = f.password_field :password_confirmation, autofocus: true, autocomplete: "password", placeholder: "例) 6文字以上の英数字"
             %label{for:"current-password"} パスワード再確認
         .signup-user__button
-          = link_to users_sign_up_credit_path, class:"waves-effectv waves-light btn-large indigo" do
-            次へ
+          =f.submit "次へ", class:"waves-effectv waves-light btn-large indigo"
 
   = render "users/shared/footer_user"
 

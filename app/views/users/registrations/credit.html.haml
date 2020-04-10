@@ -4,7 +4,7 @@
     %span.signup-title クレジットカード登録
     .signup-inner
       %form.signup-user.s12
-      = form_with model: @user, url: users_sign_up_confirmation_path, id: 'new_user', class: 'signup-user s12', local: true do |f|
+      = form_with model: @user, url: users_sign_up_confirmation_path, method: :get, id: 'new_user', class: 'signup-user s12', local: true do |f|
         .signup-user__inner.row
           .credit-number
             %i.material-icons.prefix credit_card
@@ -32,8 +32,7 @@
             %input#credit-code.credit-code{type:"text"}
             %label CVC
         .signup-user__button
-          = link_to users_sign_up_confirmation_path, class:"waves-effectv waves-light btn-large indigo" do
-            次へ
+          =f.submit "次へ", class:"waves-effectv waves-light btn-large indigo"
 
 
 
