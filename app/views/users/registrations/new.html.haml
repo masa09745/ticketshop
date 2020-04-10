@@ -3,35 +3,35 @@
   .signup-main
     %span.signup-title 新規登録
     .signup-inner
-      %form.signup-user.s12
+      = form_with model: @user, url: users_sign_up_credit_path, method: :get, id: 'new_user', class: 'signup-user s12', local: true do |f|
         .signup-user__inner.row
           .input-field.col.s6
             %i.material-icons.prefix account_circle
-            %input#username.validate{type:"text"}
+            = f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "例) 太郎"
             %label{for:"name"} 氏名
         .signup-user__inner.row
           .input-field.col.s6
             %i.material-icons.prefix account_circle
-            %input#username_kana.validate{type: "text"}
-            %label{for:"username_kana"} 氏名(カナ)
+            = f.text_field :name_kana, autofocus: true, autocomplete: "name_kana", placeholder: "例) タロウ"
+            %label{for:"name_kana"} 氏名(カナ)
         .signup-user__inner.row
           .input-field.col.s6
             %i.material-icons.prefix email
-            %input#email.validate{type: "email"}
+            = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "例) xxx@exsample.com"
             %label{for:"email"} メールアドレス
         .signup-user__inner.row
           .input-field.col.s4
             %i.material-icons.prefix lock_outline
-            %input#password.validate{type: "password",autocomplete:"new-password"}
-            %label{:for => "password"} パスワード
+            = f.password_field :password, autofocus: true, autocomplete: "password", placeholder: "例) 6文字以上の英数字"
+            %label{for:"password"} パスワード
         .signup-user__inner.row
           .input-field.col.s4
             %i.material-icons.prefix lock_outline
-            %input#current-password.validate{type: "password",autocomplete:"current-password"}
-            %label{:for => "current-password"} パスワード再確認
+            = f.password_field :password_confirmation, autofocus: true, autocomplete: "password", placeholder: "例) 6文字以上の英数字"
+            %label{for:"current-password"} パスワード再確認
         .signup-user__button
-          = link_to users_sign_up_credit_path, class:"waves-effectv waves-light btn-large indigo" do
-            次へ
+          =f.submit "次へ", class:"waves-effectv waves-light btn-large indigo"
+
   = render "users/shared/footer_user"
 
 
