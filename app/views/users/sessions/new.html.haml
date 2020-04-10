@@ -8,13 +8,13 @@
           .signin-user__inner.row
             .input-field.col.s6
               %i.material-icons.prefix email
-              %input#email.validate{type: "email"}
+              = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "例) xxx@exsample.com"
               %label{for:"email"} メールアドレス
           .signin-user__inner.row
             .input-field.col.s4
               %i.material-icons.prefix lock_outline
-              %input#password.validate{type: "password",autocomplete:"new-password"}
+              = f.password_field :password, autofocus: true, autocomplete: "password", placeholder: "例) 6文字以上の英数字"
               %label{:for => "password"} パスワード
           .signin-user__button
-            %button.waves-effect.waves-light.btn-large.indigo{name: "action", type:"submit"} ログイン
+            =f.submit "ログイン", class:"waves-effectv waves-light btn-large indigo"
   = render "users/shared/footer_user"
