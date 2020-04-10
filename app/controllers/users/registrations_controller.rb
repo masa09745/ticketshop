@@ -9,56 +9,46 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def credit
+    session[:name] = user_params[:name]
+    session[:name_kana] = user_params[:name_kana]
+    session[:email] = user_params[:email]
+    session[:password] = user_params[:password]
+    session[:password_confirmation] = user_params[:password_confirmation]
+    @user = User.new 
   end
 
-  # POST /resource
-  # def create
-  #   super
-  # end
+  def confirmation
+    @user[:user][:name] = session[:user]["name"]
+    @user[:user][:name_kana] = session[:user]["name_kana"]
+    @user[:user][:email] = session[:user]["email"]
 
-  # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  end
 
-  # PUT /resource
-  # def update
-  #   super
-  # end
+  def create
+    @user = User.new(
+      name: session[:name],
+      name: session[:name_kana],
+      email: session[:email],
+      password: session[:password],
+      password_confirmation: session[:password_confirmation]
+    )
+    if @user.save
+      session[:id] = @user.id
+      redirect_to root_path
+    else
+      render '/signup/registration'
+    end
+  end
 
-  # DELETE /resource
-  # def destroy
-  #   super
-  # end
+  private
+  def user_params
+    params.require(:user).permit(
+      :name,
+      :name_kana,
+      :email,
+      :password,
+      :password_confirmation
+    )
+  end
 
-  # GET /resource/cancel
-  # Forces the session data which is usually expired after sign
-  # in to be expired now. This is useful if the user wants to
-  # cancel oauth signing in/up in the middle of the process,
-  # removing all OAuth session data.
-  # def cancel
-  #   super
-  # end
-
-  # protected
-
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_up_params
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
-  # end
-
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_account_update_params
-  #   devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
-  # end
-
-  # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
-
-  # The path used after sign up for inactive accounts.
-  # def after_inactive_sign_up_path_for(resource)
-  #   super(resource)
-  # end
 end

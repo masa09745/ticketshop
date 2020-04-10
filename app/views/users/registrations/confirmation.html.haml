@@ -1,0 +1,21 @@
+.signup-wrapper
+  = render "users/shared/header_user"
+  .signup-main
+    %span.signup-title 入力内容確認
+    .signup-inner
+      = form_with model: @user, url: users_sign_up_credit_path, id: 'new_user', class: 'signup-user s12', local: true do |f|
+        .signup-user__inner.row
+          .input-field.col.s6
+            %i.material-icons.prefix account_circle
+            = f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "例) 太郎", value:"#{session[:user]["name"]}"
+            %label{for:"name"} 氏名
+        .signup-user__inner.row
+          .input-field.col.s6
+            %i.material-icons.prefix account_circle
+            = f.text_field :name_kana, autofocus: true, autocomplete: "name_kana", placeholder: "例) タロウ", value:"#{session[:user]["name_kana"]}"
+            %label{for:"name_kana"} 氏名(カナ)
+        .signup-user__inner.row
+          .input-field.col.s6
+            %i.material-icons.prefix email
+            = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "例) xxx@exsample.com", value:"#{session[:user]["email"]}"
+            %label{for:"email"} メールアドレス
