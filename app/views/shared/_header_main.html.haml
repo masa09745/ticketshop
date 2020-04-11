@@ -10,7 +10,7 @@
           %span.header-inner__category カテゴリーから探す
       .header-inner__lwr__right
         -if user_signed_in?
-          .header-inner__lwr__right__mypage
+          =link_to user_path(current_user.id), class:"header-inner__lwr__right__mypage" do
             マイページ
           =link_to destroy_user_session_path, method: :delete, class:"header-inner__lwr__right__logout" do
             ログアウト
