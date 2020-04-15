@@ -2,7 +2,8 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    = favicon_link_tag 'favicon.ico'
+    = favicon_link_tag(‘favicon.ico’, skip_pipeline: true)
+
     %title Ticketshop
     = csrf_meta_tags
     = csp_meta_tag
