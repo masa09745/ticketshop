@@ -80,3 +80,26 @@ Schedule.create!(
 
 )
 
+5.times do
+  Ticket.create!(
+    seat_type: "SS",
+    schedule_id: "43",
+    stadia_id: "1"
+  )
+  Ticket.create!(
+    seat_type: "SS",
+    schedule_id: "44",
+    stadia_id: "1"
+  )
+  Ticket.create!(
+    seat_type: "SS",
+    schedule_id: "45",
+    stadia_id: "1"
+  )
+  Ticket.create!(
+    seat_type: "SS",
+    schedule_id: "46",
+    stadia_id: "1"
+  )
+end
+

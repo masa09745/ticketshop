@@ -7,6 +7,11 @@
 
     .schedule-inner__month
       %span 今月の試合
+      .match-box
+        -@matches.each do |match|
+          .match-box__inner
+            = link_to schedule_path(match) do
+              =match.match_name
       .calender
         = month_calendar events: @matches do |date, matches|
           = date.day

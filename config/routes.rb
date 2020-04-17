@@ -8,8 +8,15 @@ Rails.application.routes.draw do
     get "users/sign_up/credit" => "users/registrations#credit"
     get "users/sign_up/confirmation" => "users/registrations#confirmation"
   end
+  resources :schedules, only: :show do
+    resources :tickets, only: :buy do
+      member do
+        get 'buy' => 'tickets#buy'
+      end
+    end
+  end
 
-  resources :tickets
+
   resources :schedules,:stadiums, only: [:index, :show]
 
 
