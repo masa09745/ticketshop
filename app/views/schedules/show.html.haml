@@ -1,0 +1,35 @@
+= render "shared/header_main"
+.schedule-wrapper
+  .schedule-inner
+    .schedule-inner__top
+      =link_to stadiums_path do
+        %span スタジアム一覧
+      =link_to schedules_path do
+        %span スケジュール一覧
+    .schedule-inner__match
+      .match-index
+        .match-index__date
+          4月17日
+        .match-index__stadium
+          会場:Aスタジアム
+      .match-name
+        %span チームA VS チームB
+      .match-ticket
+        .match-ticket__inner
+          .seat-type
+            SS席
+            .buy-button
+              %button.waves-effectv.waves-light.btn.indigo 購入する
+          .seat-type
+            S席
+            .buy-button
+              %button.waves-effectv.waves-light.btn.indigo 購入する
+          .seat-type
+            A席
+            .buy-button
+              %button.waves-effectv.waves-light.btn.indigo 購入する
+          .seat-type
+            B席
+            .buy-button
+              %button.waves-effectv.waves-light.btn.indigo 購入する
+= render "shared/footer_main"
