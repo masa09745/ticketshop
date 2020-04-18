@@ -8,7 +8,7 @@
         チケット購入確認
       .buy-form
         .buy-form__inner
-          = form_with model: @order method: :post do |f|
+          = form_with model: @order do |f|
             .match-name
               %label 試合名
               %p チームA VS チームB

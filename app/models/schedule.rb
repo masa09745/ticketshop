@@ -4,4 +4,5 @@ class Schedule < ApplicationRecord
   end
 
   has_many :stocks
+  has_many :tickets
 end
