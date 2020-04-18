@@ -11,16 +11,19 @@
           = form_with model: @order do |f|
             .match-name
               %label 試合名
-              %p チームA VS チームB
+              %p
+                = @match.match_name
             .match-venue
               %label 会場
               %p Aスタジアム
             .match-date
               %label 試合日
-              %p 4/19
+              %p
+                = @match.match_date.strftime('%m月 %d日')
             .match-time
               %label 開始
-              %p 18:00
+              %p
+                = @match.match_date.strftime('%H:%M')
             .seat-type
               %label 席種
               %p SS席

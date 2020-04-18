@@ -3,7 +3,7 @@ class TicketsController < ApplicationController
 
 
   def buy
-
+    
   end
 
   def show
