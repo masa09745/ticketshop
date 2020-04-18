@@ -8,11 +8,12 @@
       .stadium-title
         %span スタジアム一覧
       .stadium-main
-        - @stadiums.each do |stadium|
+        - @venues.each do |venue|
           .stadium-info
             .stadium-info__thumbnail
-              = image_tag stadium.image.url, class: 'stadium-image'
+              = image_tag venue.image.url, class: 'stadium-image'
             .stadium-info__text
               %span
-                =stadium.name
-              %span 詳細
+                =venue.name
+              =link_to venue_path(venue) do
+                %span 詳細

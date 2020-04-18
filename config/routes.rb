@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
 
 
-  resources :schedules,:stadiums, only: [:index, :show]
+  resources :schedules,:venues, only: [:index, :show]
 
 
   scope :mypage do

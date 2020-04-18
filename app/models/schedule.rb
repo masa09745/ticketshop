@@ -1,9 +1,7 @@
 class Schedule < ApplicationRecord
-
   def start_time
     self.match_date
   end
 
-  has_many :tickets
-
+  has_many :stocks
 end

@@ -4,18 +4,19 @@
     .stadium-inner__top
       =link_to schedules_path do
         %span スケジュール一覧
-      =link_to stadiums_path do
+      =link_to venue_path do
         %span スタジアム一覧
     .stadium-inner__contents
       .stadium-name
         %span Aスタジアム
       .stadium-box
         .stadium-box__thumbnail
-          = image_tag 'icon1.jpg', class: 'stadium-image', size:'400x550'
+          = image_tag @venue.image.url, class: 'stadium-image'
         .stadium-box__text
           .stadium-address
             %span 住所
-            %p A県A市AA町xx-xx-xx
+            %p
+              = @venue.address
           .stadium-access
             %span アクセス
             %p 〇〇駅からバスで15分

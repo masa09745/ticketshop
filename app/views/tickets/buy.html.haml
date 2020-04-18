@@ -8,26 +8,27 @@
         チケット購入確認
       .buy-form
         .buy-form__inner
-          .match-name
-            %label 試合名
-            %p チームA VS チームB
-          .match-venue
-            %label 会場
-            %p Aスタジアム
-          .match-date
-            %label 試合日
-            %p 4/19
-          .match-time
-            %label 開始
-            %p 18:00
-          .seat-type
-            %label 席種
-            %p SS席
-          .ticket-count
-            %label 枚数
-            %p 2枚
-          .ticket-price
-            %label 価格
-            %p 10000円
-          .buy-button
-            %button.waves-effect.waves-light.btn-large 購入する
+          = form_with model: @order method: :post do |f|
+            .match-name
+              %label 試合名
+              %p チームA VS チームB
+            .match-venue
+              %label 会場
+              %p Aスタジアム
+            .match-date
+              %label 試合日
+              %p 4/19
+            .match-time
+              %label 開始
+              %p 18:00
+            .seat-type
+              %label 席種
+              %p SS席
+            .ticket-count
+              %label 枚数
+              =f.text_field :ticket_count
+            .ticket-price
+              %label 価格
+              %p 10000円
+            .buy-button
+              %button.waves-effect.waves-light.btn-large 購入する
