@@ -2,7 +2,7 @@
 .schedule-wrapper
   .schedule-inner
     .schedule-inner__top
-      =link_to stadiums_path do
+      =link_to venues_path do
         %span スタジアム一覧
       =link_to schedules_path do
         %span スケジュール一覧
@@ -21,7 +21,7 @@
           .seat-type
             SS席
             .buy-button
-              =link_to "購入する", buy_schedule_ticket_path(@match, @ticket), class: "waves-effectv.waves-light.btn.indigo"
+              =link_to "購入する", buy_schedule_tickets_path(@match), class: "waves-effectv.waves-light.btn.indigo"
 
           .seat-type
             S席

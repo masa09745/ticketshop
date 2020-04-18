@@ -7,7 +7,7 @@ class SchedulesController < ApplicationController
   end
 
   def show
-    @ticket = @match.tickets.find_by(params[:schedule_id])
+    @match = Schedule.find(params[:id])
   end
 
   private

@@ -1,9 +1,9 @@
 class TicketsController < ApplicationController
   before_action :set_match, only: :buy
 
-  
+
   def buy
-    @ticket = @match.tickets.find_by!(params[:id])
+
   end
 
   def show

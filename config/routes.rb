@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
   resources :schedules, only: :show do
     resources :tickets, only: :buy do
-      member do
+      collection do
         get 'buy' => 'tickets#buy'
       end
     end
