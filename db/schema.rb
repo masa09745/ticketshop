@@ -32,8 +32,10 @@ ActiveRecord::Schema.define(version: 2020_04_18_164415) do
 
   create_table "stock_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "stock_id", null: false
+    t.bigint "schedule_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["schedule_id"], name: "index_stock_details_on_schedule_id"
     t.index ["stock_id"], name: "index_stock_details_on_stock_id"
   end
 
@@ -80,6 +82,7 @@ ActiveRecord::Schema.define(version: 2020_04_18_164415) do
 
   add_foreign_key "orders", "schedules"
   add_foreign_key "orders", "users"
+  add_foreign_key "stock_details", "schedules"
   add_foreign_key "stock_details", "stocks"
   add_foreign_key "stocks", "schedules"
   add_foreign_key "tickets", "orders"
