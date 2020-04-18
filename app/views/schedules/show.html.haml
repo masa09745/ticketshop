@@ -10,6 +10,8 @@
       .match-index
         .match-index__date
           4月17日
+        .match-index__time
+          18:00 開始
         .match-index__stadium
           会場:Aスタジアム
       .match-name
@@ -19,7 +21,8 @@
           .seat-type
             SS席
             .buy-button
-              %button.waves-effectv.waves-light.btn.indigo 購入する
+              =link_to "購入する", buy_schedule_ticket_path(@match, @ticket), class: "waves-effectv.waves-light.btn.indigo"
+
           .seat-type
             S席
             .buy-button

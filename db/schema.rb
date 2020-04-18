@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_03_030535) do
+ActiveRecord::Schema.define(version: 2020_04_17_041010) do
 
   create_table "schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "match_name", null: false
     t.datetime "match_date", null: false
+    t.bigint "stadium_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["stadium_id"], name: "index_schedules_on_stadium_id"
   end
 
   create_table "stadia", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -24,6 +26,16 @@ ActiveRecord::Schema.define(version: 2020_04_03_030535) do
     t.string "image", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "tickets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "seat_type", null: false
+    t.bigint "schedule_id", null: false
+    t.bigint "stadia_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["schedule_id"], name: "index_tickets_on_schedule_id"
+    t.index ["stadia_id"], name: "index_tickets_on_stadia_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -46,3 +46,47 @@
     }
   }
 }
+
+.buy-wrapper{
+  font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic',
+  'メイリオ', 'Meiryo', sans-serif;
+  .buy-inner{
+    max-width: 1020px;
+    min-width: 750px;
+    margin: 0 auto;
+    padding: 30px;
+
+    &__top{
+      height: 75px;
+    }
+    &__main{
+      .buy-title{
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      .buy-form{
+        width: 750px;
+        margin: 0 auto;
+        padding: 10px 35px;
+        &__inner{
+          .match-name, .match-venue, .match-date, .match-time, .seat-type, .ticket-count, .ticket-price{
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            label{
+              font-size: 20px;
+              line-height: 45px;
+            }
+            p{
+              font-size: 30px;
+            }
+          }
+          .buy-button{
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
