@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_04_18_164415) do
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "ticket_count", null: false
     t.bigint "user_id", null: false
     t.bigint "schedule_id", null: false
     t.datetime "created_at", null: false

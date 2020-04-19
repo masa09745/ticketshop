@@ -8,28 +8,29 @@
         チケット購入確認
       .buy-form
         .buy-form__inner
-          = form_with model: @order do |f|
+          = form_with(model:[@schedule,@order])do |f|
             .match-name
               %label 試合名
               %p
-                = @match.match_name
+                = @schedule.match_name
             .match-venue
               %label 会場
               %p Aスタジアム
             .match-date
               %label 試合日
               %p
-                = @match.match_date.strftime('%m月 %d日')
+                = @schedule.match_date.strftime('%m月 %d日')
             .match-time
               %label 開始
               %p
-                = @match.match_date.strftime('%H:%M')
+                = @schedule.match_date.strftime('%H:%M')
             .seat-type
               %label 席種
               %p SS席
             .ticket-count
               %label 枚数
-              =f.text_field :ticket_count
+              .count-field
+                =f.text_field :ticket_count
             .ticket-price
               %label 価格
               %p 10000円

@@ -9,10 +9,7 @@ Rails.application.routes.draw do
     get "users/sign_up/confirmation" => "users/registrations#confirmation"
   end
   resources :schedules, only: :show do
-    resources :tickets, only: :buy do
-      collection do
-        get 'buy' => 'tickets#buy'
-      end
+    resources :orders do
     end
   end
 
