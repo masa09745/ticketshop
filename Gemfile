@@ -82,3 +82,4 @@ gem 'font-awesome-rails'
 gem "jquery-rails"
 gem "simple_calendar", "~> 2.0"
 gem 'carrierwave'
+gem 'pry-rails'
