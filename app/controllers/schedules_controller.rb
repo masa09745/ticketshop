@@ -7,7 +7,6 @@ class SchedulesController < ApplicationController
   end
 
   def show
-    @match = Schedule.find(params[:id])
   end
 
   private

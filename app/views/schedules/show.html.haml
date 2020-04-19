@@ -17,22 +17,6 @@
       .match-name
         %span チームA VS チームB
       .match-ticket
-        .match-ticket__inner
-          .seat-type
-            SS席
-            .buy-button
-              =link_to "購入する", new_schedule_order_path(@match), class: "waves-effectv.waves-light.btn.indigo"
-
-          .seat-type
-            S席
-            .buy-button
-              %button.waves-effectv.waves-light.btn.indigo 購入する
-          .seat-type
-            A席
-            .buy-button
-              %button.waves-effectv.waves-light.btn.indigo 購入する
-          .seat-type
-            B席
-            .buy-button
-              %button.waves-effectv.waves-light.btn.indigo 購入する
+        = link_to schedule_orders_path(@match, @orders) do
+          チケットを買う
 = render "shared/footer_main"
