@@ -25,21 +25,28 @@
               %p
                 = @schedule.match_date.strftime('%H:%M')
             .seat-type
-              SS席
-              .order-count
-                = f.text_field :ticket_count
-            .seat-type
-              S席
-            .seat-type
-              A席
-            .seat-type
-              B席
-            .ticket-count
-              %label 枚数
-              .count-field
-                =f.text_field :ticket_count
-            .ticket-price
-              %label 価格
-              %p 10000円
-            .buy-button
-              =f.submit "購入する", class:"waves-effect waves-light btn-large"
+              .seat-type__ss
+                %label SS席
+                .order-count
+                  = f.text_field :ticket_count
+                .buy-button
+                  =f.submit "購入する", class:"waves-effect waves-light btn-large"
+              .seat-type__s
+                %label S席
+                .order-count
+                  = f.text_field :ticket_count
+                .buy-button
+                  =f.submit "購入する", class:"waves-effect waves-light btn-large"
+              .seat-type__a
+                %label A席
+                .order-count
+                  = f.text_field :ticket_count
+                .buy-button
+                  =f.submit "購入する", class:"waves-effect waves-light btn-large"
+              .seat-type__b
+                %label B席
+                .order-count
+                  = f.text_field :ticket_count
+                .buy-button
+                  =f.submit "購入する", class:"waves-effect waves-light btn-large"
+

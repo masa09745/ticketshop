@@ -82,6 +82,11 @@
               font-size: 30px;
             }
           }
+          .seat-type{
+            &__ss, &__s, &__a, &__b{
+              width: 120px;
+            }
+          }
           .buy-button{
             text-align: center;
           }
