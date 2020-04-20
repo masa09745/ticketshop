@@ -9,14 +9,15 @@
     .schedule-inner__match
       .match-index
         .match-index__date
-          4月17日
+          = @match.match_date.strftime('%m月 %d日')
         .match-index__time
-          18:00 開始
+          = @match.match_date.strftime('%H:%M')
         .match-index__stadium
           会場:Aスタジアム
       .match-name
-        %span チームA VS チームB
+        %span
+          =@match.match_name
       .match-ticket
-        = link_to schedule_orders_path(@match, @orders) do
+        = link_to new_schedule_order_path(@match, @orders) do
           チケットを買う
 = render "shared/footer_main"

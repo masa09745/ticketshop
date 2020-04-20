@@ -26,7 +26,8 @@
                 = @schedule.match_date.strftime('%H:%M')
             .seat-type
               %label 席種
-              %p SS席
+              =f.select :seat_type, [["--",0],["SS", 1],["S", 2],["A", 3],["B", 4]]
+
             .ticket-count
               %label 枚数
               .count-field
