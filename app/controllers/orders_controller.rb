@@ -6,8 +6,8 @@ class OrdersController < ApplicationController
   end
 
   def new
-
     @order = Order.new
+    @grade = Grade.all
     @order.tickets.build
 
   end

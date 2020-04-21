@@ -70,7 +70,7 @@
         margin: 0 auto;
         padding: 10px 35px;
         &__inner{
-          .match-name, .match-venue, .match-date, .match-time, .seat-type, .ticket-count, .ticket-price{
+          .match-name, .match-venue, .match-date, .match-time, .seat-typebox, .ticket-count, .ticket-price, .grade{
             margin-bottom: 10px;
             display: flex;
             justify-content: space-between;
@@ -83,9 +83,7 @@
             }
           }
           .seat-type{
-            &__ss, &__s, &__a, &__b{
-              width: 120px;
-            }
+            width: 150px;
           }
           .buy-button{
             text-align: center;
