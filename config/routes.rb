@@ -8,19 +8,20 @@ Rails.application.routes.draw do
     get "users/sign_up/credit" => "users/registrations#credit"
     get "users/sign_up/confirmation" => "users/registrations#confirmation"
   end
-  resources :schedules, only: :show do
-    resources :orders do
-    end
+
+  resources :teams do
+    resources :schedules
   end
 
-
   resources :schedules,:venues, only: [:index, :show]
+
+
 
 
   scope :mypage do
     resources :users, only: [:show]
   end
 
-  root to: "schedules#index"
+  root to: "teams#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,32 +1,10 @@
-= render "shared/header_main"
-.ticktet-wrapper
-  .ticket-inner
-    .ticket-inner__top
-      =link_to schedules_path do
-        %span スケジュール一覧
-      =link_to venues_path do
-        %span スタジアム一覧
-
-    .ticket-inner__weeks
-      %span 最近の試合
-      .match-box
-        - @matches.each do |match|
-          .match-box__inner
-            .match-date
-              = match.match_date.strftime('%m月 %d日')
-            .match-time
-              = match.match_date.strftime('%H:%M')
-            .match-name
-              =link_to schedule_path(match) do
-                = match.match_name
-
-    .ticket-inner__month
-      %span その他の試合
-      .calender
-        = week_calendar number_of_weeks: 2, events: @fullmatches do |date, fullmatches|
-          = date.day
-          - fullmatches.each do |fullmatch|
-            .match-name
-              = link_to schedule_path(fullmatch) do
-                = fullmatch.match_name
-= render "shared/footer_main"
+.schedule-test
+  -@schedules.each do |schedule|
+    .match-date
+      =schedule.match_date.strftime('%m月 %d日')
+    .match-time
+      =schedule.match_date.strftime('%H:%M')
+    -if schedule.team1_id == @team.id
+      = schedule.team2_id
+    - else
+      = schedule.team1_id
