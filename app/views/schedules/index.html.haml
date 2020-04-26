@@ -4,7 +4,8 @@
       =schedule.match_date.strftime('%m月 %d日')
     .match-time
       =schedule.match_date.strftime('%H:%M')
+    .team-name
     -if schedule.team1_id == @team.id
-      = schedule.team2_id
+      = schedule.team2.name
     - else
-      = schedule.team1_id
+      = schedule.team1.name
