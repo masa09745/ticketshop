@@ -18,62 +18,37 @@ Venue.create!(
   ]
 )
 
+Team.create!([
+  {name:'チームA'},
+  {name:'チームB'},
+  {name:'チームC'},
+  {name:'チームD'},
+  {name:'チームE'},
+  {name:'チームF'}
+])
+
 Schedule.create!(
   [
-    {match_name:'チームA VS チームC', match_date: '2020-04-21 18:00'},
-    {match_name:'チームB VS チームE', match_date: '2020-04-21 18:00'},
-    {match_name:'チームD VS チームF', match_date: '2020-04-21 18:00'},
-    {match_name:'チームA VS チームC', match_date: '2020-04-22 14:00'},
-    {match_name:'チームB VS チームE', match_date: '2020-04-22 14:00'},
-    {match_name:'チームD VS チームF', match_date: '2020-04-22 14:00'},
-    {match_name:'チームA VS チームC', match_date: '2020-04-23 14:00'},
-    {match_name:'チームB VS チームE', match_date: '2020-04-23 14:00'},
-    {match_name:'チームD VS チームF', match_date: '2020-04-23 14:00'},
+    {team1_id:'1', team2_id:'2', match_date: '2020-04-27 18:00', venue_id: '1'},
+    {team1_id:'3', team2_id:'4', match_date: '2020-04-27 18:00', venue_id: '3'},
+    {team1_id:'5', team2_id:'6', match_date: '2020-04-27 18:00', venue_id: '5'},
+    {team1_id:'1', team2_id:'2', match_date: '2020-05-28 18:00', venue_id: '1'},
+    {team1_id:'3', team2_id:'4', match_date: '2020-04-28 18:00', venue_id: '3'},
+    {team1_id:'5', team2_id:'6', match_date: '2020-04-28 18:00', venue_id: '5'},
+    {team1_id:'1', team2_id:'2', match_date: '2020-04-29 18:00', venue_id: '1'},
+    {team1_id:'3', team2_id:'4', match_date: '2020-04-29 18:00', venue_id: '3'},
+    {team1_id:'5', team2_id:'6', match_date: '2020-04-29 18:00', venue_id: '5'},
 
-    {match_name:'チームA VS チームD', match_date: '2020-04-25 18:00'},
-    {match_name:'チームB VS チームF', match_date: '2020-04-25 18:00'},
-    {match_name:'チームC VS チームE', match_date: '2020-04-25 18:00'},
-    {match_name:'チームA VS チームD', match_date: '2020-04-26 18:00'},
-    {match_name:'チームB VS チームF', match_date: '2020-04-26 18:00'},
-    {match_name:'チームC VS チームE', match_date: '2020-04-26 18:00'},
-    {match_name:'チームA VS チームD', match_date: '2020-04-27 18:00'},
-    {match_name:'チームB VS チームF', match_date: '2020-04-27 18:00'},
-    {match_name:'チームC VS チームE', match_date: '2020-04-27 18:00'},
+    {team1_id:'4', team2_id:'1', match_date: '2020-05-01 18:00', venue_id: '4'},
+    {team1_id:'5', team2_id:'2', match_date: '2020-05-01 18:00', venue_id: '5'},
+    {team1_id:'6', team2_id:'3', match_date: '2020-05-01 18:00', venue_id: '6'},
+    {team1_id:'4', team2_id:'1', match_date: '2020-05-02 18:00', venue_id: '4'},
+    {team1_id:'5', team2_id:'2', match_date: '2020-05-02 18:00', venue_id: '5'},
+    {team1_id:'6', team2_id:'3', match_date: '2020-05-02 18:00', venue_id: '6'},
+    {team1_id:'4', team2_id:'1', match_date: '2020-05-03 18:00', venue_id: '4'},
+    {team1_id:'5', team2_id:'2', match_date: '2020-05-03 18:00', venue_id: '5'},
+    {team1_id:'6', team2_id:'3', match_date: '2020-05-03 18:00', venue_id: '6'}
 
-
-    {match_name:'チームA VS チームF', match_date: '2020-04-29 14:00'},
-    {match_name:'チームB VS チームC', match_date: '2020-04-29 14:00'},
-    {match_name:'チームD VS チームE', match_date: '2020-04-29 14:00'},
-    {match_name:'チームA VS チームE', match_date: '2020-04-30 14:00'},
-    {match_name:'チームA VS チームE', match_date: '2020-04-30 14:00'},
-    {match_name:'チームA VS チームE', match_date: '2020-04-30 14:00'},
-
-    {match_name:'チームB VS チームA', match_date: '2020-05-01 18:00'},
-    {match_name:'チームD VS チームC', match_date: '2020-05-01 18:00'},
-    {match_name:'チームF VS チームE', match_date: '2020-05-01 18:00'},
-    {match_name:'チームB VS チームA', match_date: '2020-05-02 18:00'},
-    {match_name:'チームD VS チームC', match_date: '2020-05-02 18:00'},
-    {match_name:'チームF VS チームE', match_date: '2020-05-02 18:00'},
-    {match_name:'チームB VS チームA', match_date: '2020-05-03 18:00'},
-    {match_name:'チームD VS チームC', match_date: '2020-05-03 18:00'},
-    {match_name:'チームF VS チームE', match_date: '2020-05-03 18:00'},
-
-    {match_name:'チームD VS チームA', match_date: '2020-05-04 14:00'},
-    {match_name:'チームF VS チームB', match_date: '2020-05-04 18:00'},
-    {match_name:'チームE VS チームC', match_date: '2020-05-04 14:00'},
-    {match_name:'チームD VS チームA', match_date: '2020-05-05 18:00'},
-    {match_name:'チームF VS チームB', match_date: '2020-05-05 18:00'},
-    {match_name:'チームE VS チームC', match_date: '2020-05-05 18:00'},
-
-    {match_name:'チームA VS チームB', match_date: '2020-05-06 18:00'},
-    {match_name:'チームC VS チームD', match_date: '2020-05-06 18:00'},
-    {match_name:'チームE VS チームF', match_date: '2020-05-06 18:00'},
-    {match_name:'チームA VS チームB', match_date: '2020-05-07 18:00'},
-    {match_name:'チームC VS チームD', match_date: '2020-05-07 18:00'},
-    {match_name:'チームE VS チームF', match_date: '2020-05-07 18:00'},
-    {match_name:'チームA VS チームB', match_date: '2020-05-08 18:00'},
-    {match_name:'チームC VS チームD', match_date: '2020-05-08 18:00'},
-    {match_name:'チームE VS チームF', match_date: '2020-05-08 18:00'}
   ]
 )
 
@@ -114,35 +89,7 @@ Stock.create!(
     {seat_type:'SS',ticket_stock: '10', schedule_id: '9'},
     {seat_type:'S',ticket_stock: '20', schedule_id: '9'},
     {seat_type:'A',ticket_stock: '30', schedule_id: '9'},
-    {seat_type:'B',ticket_stock: '50', schedule_id: '9'},
-    {seat_type:'SS',ticket_stock: '10', schedule_id: '10'},
-    {seat_type:'S',ticket_stock: '20', schedule_id: '10'},
-    {seat_type:'A',ticket_stock: '30', schedule_id: '10'},
-    {seat_type:'B',ticket_stock: '50', schedule_id: '10'},
-    {seat_type:'SS',ticket_stock: '10', schedule_id: '11'},
-    {seat_type:'S',ticket_stock: '20', schedule_id: '11'},
-    {seat_type:'A',ticket_stock: '30', schedule_id: '11'},
-    {seat_type:'B',ticket_stock: '50', schedule_id: '11'},
-    {seat_type:'SS',ticket_stock: '10', schedule_id: '12'},
-    {seat_type:'S',ticket_stock: '20', schedule_id: '12'},
-    {seat_type:'A',ticket_stock: '30', schedule_id: '12'},
-    {seat_type:'B',ticket_stock: '50', schedule_id: '12'},
-    {seat_type:'SS',ticket_stock: '10', schedule_id: '13'},
-    {seat_type:'S',ticket_stock: '20', schedule_id: '13'},
-    {seat_type:'A',ticket_stock: '30', schedule_id: '13'},
-    {seat_type:'B',ticket_stock: '50', schedule_id: '13'},
-    {seat_type:'SS',ticket_stock: '10', schedule_id: '14'},
-    {seat_type:'S',ticket_stock: '20', schedule_id: '14'},
-    {seat_type:'A',ticket_stock: '30', schedule_id: '14'},
-    {seat_type:'B',ticket_stock: '50', schedule_id: '14'},
-    {seat_type:'SS',ticket_stock: '10', schedule_id: '15'},
-    {seat_type:'S',ticket_stock: '20', schedule_id: '15'},
-    {seat_type:'A',ticket_stock: '30', schedule_id: '15'},
-    {seat_type:'B',ticket_stock: '50', schedule_id: '15'},
-    {seat_type:'SS',ticket_stock: '10', schedule_id: '16'},
-    {seat_type:'S',ticket_stock: '20', schedule_id: '16'},
-    {seat_type:'A',ticket_stock: '30', schedule_id: '16'},
-    {seat_type:'B',ticket_stock: '50', schedule_id: '16'}
+    {seat_type:'B',ticket_stock: '50', schedule_id: '9'}
 
 
   ]
