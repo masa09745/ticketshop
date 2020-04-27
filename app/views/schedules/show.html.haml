@@ -9,15 +9,18 @@
     .schedule-inner__match
       .match-index
         .match-index__date
-          = @match.match_date.strftime('%m月 %d日')
+          = @schedule.match_date.strftime('%m月 %d日')
         .match-index__time
-          = @match.match_date.strftime('%H:%M')
+          = @schedule.match_date.strftime('%H:%M')
         .match-index__stadium
-          会場:Aスタジアム
+          = @schedule.venue.name
       .match-name
         %span
-          =@match.match_name
+          = @schedule.team1.name
+        %span
+          VS
+        %span
+          = @schedule.team2.name
       .match-ticket
-        = link_to new_schedule_order_path(@match, @orders) do
-          チケットを買う
+        チケットを買う
 = render "shared/footer_main"

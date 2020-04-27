@@ -1,11 +1,14 @@
 .schedule-test
   -@schedules.each do |schedule|
-    .match-date
-      =schedule.match_date.strftime('%m月 %d日')
-    .match-time
-      =schedule.match_date.strftime('%H:%M')
-    .team-name
-    -if schedule.team1_id == @team.id
-      = schedule.team2.name
-    - else
-      = schedule.team1.name
+    .schedule-box
+      .match-date
+        =schedule.match_date.strftime('%m月 %d日')
+      .match-time
+        =schedule.match_date.strftime('%H:%M')
+      .team-name
+      -if schedule.team1_id == @team.id
+        =link_to team_schedule_path(@team, schedule) do
+          = schedule.team2.name
+      - else
+        =link_to team_schedule_path(@team, schedule) do
+          = schedule.team1.name
