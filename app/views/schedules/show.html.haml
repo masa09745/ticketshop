@@ -22,5 +22,13 @@
         %span
           = @schedule.team2.name
       .match-ticket
-        チケットを買う
+        - @stocks.each do |stock|
+          .match-ticket_grade
+            = stock.seat_type
+          .match-ticket__price
+            =stock.price
+            円
+          .match-ticket__buy
+            枚数を選ぶ
+          
 = render "shared/footer_main"
