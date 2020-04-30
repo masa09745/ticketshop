@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :schedules,:venues, only: [:index, :show]
+  resources :venues, only: [:index, :show]
 
 
 
