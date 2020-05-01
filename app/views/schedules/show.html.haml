@@ -29,6 +29,7 @@
             =stock.price
             円
           .match-ticket__buy
-            枚数を選ぶ
+            =link_to team_schedule_orders_path(@team, @schedule) do
+              枚数を選ぶ
           
 = render "shared/footer_main"

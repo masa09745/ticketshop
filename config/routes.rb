@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :teams, only:[:index, :show] do
     resources :schedules, only:[:index, :show] do
-      resources :order
+      resources :orders
     end
   end
 

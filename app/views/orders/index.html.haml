@@ -11,7 +11,10 @@
           .match-name
             %label 試合名
             %p
-              = @schedule.match_name
+              = @schedule.team1.name
+            %p VS
+            %p
+              =@schedule.team2.name
           .match-venue
             %label 会場
             %p Aスタジアム
@@ -23,32 +26,3 @@
             %label 開始
             %p
               = @schedule.match_date.strftime('%H:%M')
-          .seat-typebox
-            = form_with(model:[@schedule,@order], class: "seat-type")do |f|
-              .seat-type__ss
-                SS席 :seat_type
-              .order-count
-                = f.text_field :ticket_count
-              .buy-button
-                =f.submit "購入する", class:"waves-effect waves-light btn-large"
-            = form_with(model:[@schedule,@order], class: "seat-type")do |f|
-              .seat-type__ss
-                %label SS席
-              .order-count
-                = f.text_field :ticket_count
-              .buy-button
-                =f.submit "購入する", class:"waves-effect waves-light btn-large"
-            = form_with(model:[@schedule,@order], class: "seat-type")do |f|
-              .seat-type__ss
-                %label SS席
-              .order-count
-                = f.text_field :ticket_count
-              .buy-button
-                =f.submit "購入する", class:"waves-effect waves-light btn-large"
-            = form_with(model:[@schedule,@order], class: "seat-type")do |f|
-              .seat-type__ss
-                %label SS席
-              .order-count
-                = f.text_field :ticket_count
-              .buy-button
-                =f.submit "購入する", class:"waves-effect waves-light btn-large"
