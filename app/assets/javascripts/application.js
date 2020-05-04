@@ -14,10 +14,9 @@
 //= require rails-ujs
 //= require turbolinks
 //= require activestorage
-//= require materialize-sprockets
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 //= require_tree .
 
-$(document).ready(function(){
-  $('select').formSelect();
-});
 

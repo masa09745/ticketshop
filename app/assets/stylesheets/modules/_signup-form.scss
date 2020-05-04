@@ -1,0 +1,12 @@
+.signup-form{
+  width: 700px;
+  margin: 0 auto;
+
+  &__title{
+    border-bottom: solid 3px #dcdcdc;
+  }
+
+  &__inner{
+    padding: 20px 15px;
+  }
+}

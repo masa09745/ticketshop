@@ -1,10 +1,5 @@
 .signup-wrapper
   = render "users/shared/header_user"
-  .signup-main
-    %span.signup-title 入力内容確認
-    .signup-inner
-      = form_with model: @user, url: user_registration_path, method: :post, id: 'new_user', class: 'signup-user s12', local: true do |f|
-        .signup-user__inner.row
-          登録完了しました。
-        .signup-user__button
-          =f.submit "完了", class:"waves-effectv waves-light btn-large indigo"
+  = render "users/shared/signup-confirmation"
+  = render "users/shared/footer_user"
+
