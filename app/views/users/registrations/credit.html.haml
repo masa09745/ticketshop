@@ -1,39 +1,4 @@
 .signup-wrapper
   = render "users/shared/header_user"
-  .signup-main
-    %span.signup-title クレジットカード登録
-    .signup-inner
-      %form.signup-user.s12
-      = form_with model: @user, url: users_sign_up_confirmation_path, method: :get, id: 'new_user', class: 'signup-user s12', local: true do |f|
-        .signup-user__inner.row
-          .credit-number
-            %i.material-icons.prefix credit_card
-            %label カード番号
-            %span.must 必須
-          .input-field.col.s6
-            %input#credit-number.credit-number{type:"text"}
-        .signup-user__inner.row
-          .credit-limit
-            %i.material-icons.prefix date_range
-            %label 有効期限
-            %span.must 必須
-          .input-field.col.s2
-            %input#credit-month.credit-month{type:"text"}
-            %label Month
-          .input-field.col.s2
-            %input#credit-year.credit-year{type:"text"}
-            %label Year
-        .signup-user__inner.row
-          .credit-cvc
-            %i.material-icons.prefix lock_outline
-            %label セキュリティコード
-            %span.must 必須
-          .input-field.col.s2
-            %input#credit-code.credit-code{type:"text"}
-            %label CVC
-        .signup-user__button
-          =f.submit "次へ", class:"waves-effectv waves-light btn-large indigo"
-
-
-
+  = render "users/shared/signup-credit"
   = render "users/shared/footer_user"

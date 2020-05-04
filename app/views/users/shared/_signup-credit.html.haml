@@ -1,0 +1,31 @@
+.signup-form
+  .signup-form__title
+    %span クレジットカード登録
+  .signup-form__inner
+    = form_with model: @user, url: users_sign_up_confirmation_path, method: :get, id: 'new_user', class: 'signup-credit', local: true do |f|
+      .signup-credit__number
+        .form-group
+          .form-group__text
+            %label カード番号
+            %span.form-group__text-red 必須
+          .form-group__input
+            = f.text_field :credit_number, class: "form-control"
+      .signup-credit__limit
+        .form-group
+          .form-group__text
+            %label 有効期限
+            %span.form-group__text-red 必須
+            %p Month/Year
+          .form-group__input
+            = f.text_field :credit_month,class:"form-control"
+            %span /
+            = f.text_field :credit_yaer,class:"form-control"
+      .signup-credit__cvc
+        .form-group
+          .form-group__text
+            %label セキュリティコード
+            %span.form-group__text-red 必須
+          .form-group__input
+            = f.text_field :credit_code,class:"form-control"
+      .signup-credit__button
+        =f.submit "次へ", class:"btn btn-primary btn-lg"
