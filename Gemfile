@@ -76,11 +76,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml-rails'
 gem 'devise'
-gem 'materialize-sass', '~> 1.0.0'
-gem 'material_icons'
 gem 'font-awesome-rails'
 gem "jquery-rails"
 gem "simple_calendar", "~> 2.0"
 gem 'carrierwave'
 gem 'pry-rails'
 gem 'active_hash'
+gem 'bootstrap', '~> 4.4.1'

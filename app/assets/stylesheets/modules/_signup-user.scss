@@ -1,0 +1,23 @@
+.signup-user{
+
+  &__name{
+    width: 150px;
+  }
+
+  &__name-kana{
+    width: 150px;
+
+  }
+
+  &__mail{
+    width: 300px;
+  }
+
+  &__password{
+    width: 200px;
+  }
+
+  &__favorite{
+    width: 250px;
+  }
+}

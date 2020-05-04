@@ -7,12 +7,13 @@
 @import 'modules/stadiums';
 @import 'modules/users';
 @import 'shared/header_main';
-@import 'shared/header_user';
+@import 'shared/header-user';
 @import 'shared/footer_user';
 @import 'config/reset';
-@import 'modules/new';
-@import "materialize";
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import 'modules/signup-form';
+@import 'modules/signup-user';
+@import "bootstrap";
+
 
 
 
