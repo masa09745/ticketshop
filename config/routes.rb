@@ -9,11 +9,9 @@ Rails.application.routes.draw do
     get "users/sign_up/confirmation" => "users/registrations#confirmation"
   end
 
-  resources :teams, only:[:index, :show] do
-    resources :schedules, only:[:index, :show] do
-      resources :orders
-    end
-  end
+  resources :teams, only:[:index, :show]
+
+  resources :schedules, only:[:index, :show]
 
   resources :venues, only: [:index, :show]
 
