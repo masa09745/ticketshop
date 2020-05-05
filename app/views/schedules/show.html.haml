@@ -1,11 +1,6 @@
-= render "shared/header_main"
 .schedule-wrapper
+  = render "shared/header-main"
   .schedule-inner
-    .schedule-inner__top
-      =link_to venues_path do
-        %span スタジアム一覧
-      =link_to "" do
-        %span スケジュール一覧
     .schedule-inner__match
       .match-index
         .match-index__date
@@ -29,7 +24,7 @@
             =stock.price
             円
           .match-ticket__buy
-            =link_to team_schedule_orders_path(@team, @schedule) do
+            =link_to "" do
               枚数を選ぶ
           
-= render "shared/footer_main"
+= render "shared/footer-main"

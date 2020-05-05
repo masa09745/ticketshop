@@ -5,6 +5,6 @@
     .team-main__index
       - @teams.each do |team|
         .team-main__index--link
-          = link_to team_schedules_path(team) do
+          = link_to team_path(team) do
             = team.name
   = render "shared/footer-main"
