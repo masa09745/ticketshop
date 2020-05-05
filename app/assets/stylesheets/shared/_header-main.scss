@@ -1,0 +1,38 @@
+.header-main{
+  height: 100px;
+}
+
+.header-inner{
+  max-width: 760px;
+  margin: 0 auto;
+  padding-top: 5px;
+
+}
+
+.inner-upr{
+  border-bottom: solid;
+
+  &__logo{
+    font-size: 35px;
+    display: block;
+    color: #0277bd;
+    text-align: center;
+  }
+}
+
+.inner-lwr{
+  width: 500px;
+  margin: 10px auto 0;
+
+  &__linkbox{
+    font-size: 20px;
+    text-align: center;
+    &--schedule{
+      margin-right: 15px;
+    }
+  }
+}
+
+
+
+

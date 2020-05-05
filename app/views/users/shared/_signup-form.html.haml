@@ -7,42 +7,42 @@
         .form-group
           .form-group__text
             %label 氏名
-            %span.form-group__text-red 必須
+            %span.form-group__text--red 必須
           .form-group__input
             = f.text_field :name, autocomplete: "name", class: "form-control", placeholder: "例) 太郎"
       .signup-user__name-kana
         .form-group
           .form-group__text
             %label 氏名(カナ)
-            %span.form-group__text-red 必須
+            %span.form-group__text--red 必須
           .form-group__input
             = f.text_field :name_kana, autocomplete: "name_kana", class: "form-control", placeholder: "例) タロウ"
       .signup-user__mail
         .form-group
           .form-group__text
             %label メールアドレス
-            %span.form-group__text-red 必須
+            %span.form-group__text--red 必須
           .form-group__input
             =f.email_field :email, class: "form-control", placeholder: "例) xxx@example.com",  autocomplete: "email"
       .signup-user__password
         .form-group
           .form-group__text
             %label パスワード
-            %span.form-group__text-red 必須
+            %span.form-group__text--red 必須
           .form-group__input
             = f.password_field :password, autocomplete: "password", class: "form-control", placeholder: "例) 6文字以上の英数字"
       .signup-user__password
         .form-group
           .form-group__text
             %label パスワード再確認
-            %span.form-group__text-red 必須
+            %span.form-group__text--red 必須
           .form-group__input
             = f.password_field :password, autocomplete: "password", class: "form-control", placeholder: "例) 6文字以上の英数字"
       .signup-user__favorite
         .form-group
           .form-group__text
             %label 好きなチーム
-            %span.form-group__text-red 必須
+            %span.form-group__text--red 必須
           .form-group__input
             = f.text_field :favorite, autocomplete: "favorite",class: "form-control", placeholder: "チームA"
       .signup-user__button

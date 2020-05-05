@@ -2,30 +2,20 @@
  *= require simple_calendar
 */
 
-@import 'modules/tickets';
+@import 'config/reset';
+@import 'modules/team-main';
 @import 'modules/schedules';
 @import 'modules/stadiums';
-@import 'modules/users';
-@import 'shared/header_main';
+@import 'shared/header-main';
 @import 'shared/header-user';
-@import 'shared/footer_user';
-@import 'config/reset';
+@import 'shared/footer-main';
 @import 'modules/signup-form';
-@import 'modules/signup-user';
-@import 'modules/signup-credit';
-
-
 @import "bootstrap";
 
 
 
-
-*{
+a, a:visited, a:focus, a:hover {
   text-decoration: none;
-  color: #333;
-
+  color: #333333;
 }
-
-
-
 

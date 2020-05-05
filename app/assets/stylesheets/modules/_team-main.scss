@@ -1,0 +1,30 @@
+.team-wrapper{
+  font-family: "bananaslip";
+}
+
+.team-main{
+  width: 900px;
+  margin: 20px auto 0;
+
+  &__index{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    &--link{
+      width: 250px;
+      height: 75px;
+      margin-bottom: 10px;
+      font-size: 35px;
+      text-align: center;
+      border: solid 1px #333333;
+      border-radius: 0.5rem;
+
+      a{
+        vertical-align: middle;
+      }
+
+    }
+  }
+}
