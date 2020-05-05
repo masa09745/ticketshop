@@ -5,7 +5,7 @@
 
 .form-group{
   &__text{
-    &-red{
+    &--red{
       color: #ffffff;
       background-color: #FF3333;
       border: solid 2px #FF3333;
@@ -14,12 +14,23 @@
   }
 
   &__input{
-    display: flex;
     width: 250px;
-    span{
-      font-size: 25px;
-      margin-left: 10px;
-      margin-right: 10px;
+
+    &--limit{
+      display: flex;
+      width: 200px;
+
+      span{
+        font-size: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        line-height: 38px;
+      }
+    }
+
+
+    &--cvc{
+      width: 100px;
     }
   }
 }
