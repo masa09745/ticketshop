@@ -2,7 +2,7 @@
  *= require simple_calendar
 */
 
-@import 'modules/tickets';
+@import 'modules/teams';
 @import 'modules/schedules';
 @import 'modules/stadiums';
 @import 'modules/users';
@@ -13,19 +13,12 @@
 @import 'modules/signup-form';
 @import 'modules/signup-user';
 @import 'modules/signup-credit';
-
-
 @import "bootstrap";
 
 
 
-
-*{
+a, a:visited, a:focus, a:hover {
   text-decoration: none;
-  color: #333;
+  color: #333333;
 
 }
-
-
-
-

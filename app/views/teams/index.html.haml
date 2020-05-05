@@ -1,15 +1,5 @@
-= render "shared/header_main"
-.ticktet-wrapper
-  .ticket-inner
-    .ticket-inner__top
-      =link_to "" do
-        %span スケジュール一覧
-      =link_to venues_path do
-        %span スタジアム一覧
 
-  .match-test
-    - @teams.each do |team|
-      = link_to team_schedules_path(team) do
-        = team.name
-
-= render "shared/footer_main"
+.team-wrapper
+  = render "shared/header_main"
+  = render "shared/team-main"
+  = render "shared/footer_main"

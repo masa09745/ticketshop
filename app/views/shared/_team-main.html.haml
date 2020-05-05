@@ -1,0 +1,25 @@
+.team-main
+  .ticket-inner
+    .ticket-inner__top
+
+
+
+  .match-test
+    - @teams.each do |team|
+      = link_to team_schedules_path(team) do
+        = team.name
+
+
+
+
+.header-inner__lwr__right
+-if user_signed_in?
+  =link_to user_path(current_user.id), class:"header-inner__lwr__right__mypage" do
+    マイページ
+  =link_to destroy_user_session_path, method: :delete, class:"header-inner__lwr__right__logout" do
+    ログアウト
+-else
+  =link_to new_user_registration_path,class:"header-inner__lwr__right__new" do
+    %span.header-inner__new 新規登録
+  =link_to new_user_session_path, class:"header-inner__lwr__right__login" do
+    %span.header-inner__login Login
