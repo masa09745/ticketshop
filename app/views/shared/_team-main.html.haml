@@ -1,13 +1,10 @@
 .team-main
-  .ticket-inner
-    .ticket-inner__top
-
-
-
-  .match-test
+  %p スケジュールを確認したいチームを選んでください
+  .team-main__index
     - @teams.each do |team|
-      = link_to team_schedules_path(team) do
-        = team.name
+      .team-main__index--link
+        = link_to team_schedules_path(team) do
+          = team.name
 
 
 
