@@ -1,13 +1,17 @@
-.schedule-test
-  .schedule-box
-  -@schedules.each do |schedule|
-    .match-date
-      = schedule.match_date.strftime('%m月 %d日')
-    .match-time
-      =schedule.match_date.strftime('%H:%M')
-    .team-name
-      =link_to schedule_path(schedule) do
-        .match-name
-          = schedule.team1.name
-          %span VS
-          = schedule.team2.name
+.schedule-wrapper
+  = render "shared/header-main"
+  .schedule-main
+    .schedule-inner
+      %section.schedule-inner__month
+        %h2.TeamSchedule-inner__month--title
+          今月のスケジュール
+        = month_calendar events: @schedules do |date, schedules|
+          =date.day
+          - schedules.each do |schedule|
+            .match-name
+              =link_to schedule_path(schedule) do
+                = schedule.team1.name
+                %span VS
+                = schedule.team2.name
+
+  = render "shared/footer-main"
