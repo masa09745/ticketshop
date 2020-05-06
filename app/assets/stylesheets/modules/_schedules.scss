@@ -1,74 +1,13 @@
 .schedule-wrapper{
   font-family: "bananaslip";
-  background-color: #e3f2fd ;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  .schedule-inner{
-    max-width: 1020px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #ffffff;
-    &__top{
-      height: 75px;
-      border-bottom: 3px solid #bdbdbd;
-      span{
-        font-size: 20px;
-        margin: 0 15px;
-      }
-    }
-    &__weeks, &__month{
-      span{
-        font-size: 20px;
-      }
-      .calender{
-      margin-top: 20px;
-      margin-bottom: 20px;
-      .simple-calendar {
-        .next-month {
-          background-color: #ffffff;
-        }
-        .prev-month {
-          .match-name{
-            display: none;
-          }
-        }
-        .past{
-          .match-name{
-            a{
-            color: #dddddd;
-            text-decoration: none;
-           }
-          }
-        }
-      }
-      }
-    }
-    &__match{
-      padding: 30px;
-      .match-index{
-        font-size: 30px;
-        display: flex;
-        margin-bottom: 15px;
-        &__date, &__time{
-          margin-right: 20px;
-        }
-      }
-      .match-name{
-        span{
-        font-size: 45px;
-        }
-      }
-      .match-ticket{
-        margin-top: 15px;
-        &__inner{
-          padding: 10px;
-          display: flex;
-        }
-        .seat-type{
-          width: 200px;
-          font-size: 30px;
-        }
-      }
-    }
-  }
+}
+
+.schedule-main{
+  max-width: 900px;
+  min-width: 350px;
+  margin: 20px auto 0;
+}
+
+.match-name{
+  font-size: 12px;
 }

@@ -1,0 +1,32 @@
+.TeamSchedule-wrapper{
+  font-family: "bananaslip";
+
+}
+
+.TeamSchedule-main{
+  max-width: 900px;
+  min-width: 350px;
+  margin: 20px auto 0;
+}
+
+.TeamSchedule-inner{
+  padding: 20px 30px;
+
+  &__week{
+    margin-bottom: 45px;
+
+    &--title{
+      border-bottom: solid 4px #dddddd;
+    }
+  }
+
+  &__month{
+    &--title{
+      border-bottom: solid 4px #dddddd;
+    }
+  }
+}
+
+.simple-calendar{
+  margin-top: 15px;
+}

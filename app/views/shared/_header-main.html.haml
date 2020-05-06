@@ -3,19 +3,29 @@
     .inner-upr
       =link_to root_path, class:"inner-upr__logo" do
         TICKETSHOP
-    .inner-lwr
-      .inner-lwr__linkbox
-        =link_to schedules_path, class: "inner-lwr__linkbox--schedule" do
-          %span スケジュール一覧
-        =link_to venues_path, class: "inner-lwr__linkbox--venue" do
-          %span スタジアム一覧
+      .inner-upr__userbox
         -if user_signed_in?
-          =link_to user_path(current_user.id), class:"header-inner__lwr__right__mypage" do
-            マイページ
-          =link_to destroy_user_session_path, method: :delete, class:"header-inner__lwr__right__logout" do
-            ログアウト
+          .inner-upr__userbox--mypage
+            =link_to user_path(current_user.id), class:"inner-upr__userbox--link" do
+              マイページ
+          .inner-upr__userbox--logout
+            =link_to destroy_user_session_path, method: :delete, class:"inner-upr__userbox--link" do
+              ログアウト
         -else
-          =link_to new_user_registration_path,class:"header-inner__lwr__right__new" do
-            %span.header-inner__new 新規登録
-          =link_to new_user_session_path, class:"header-inner__lwr__right__login" do
-            %span.header-inner__login Login
+          .inner-upr__userbox--new
+            =link_to new_user_registration_path, class: "inner-upr__userbox--link" do
+              %span.font-red 新規登録
+          .inner-upr__userbox--login
+            =link_to new_user_session_path, class: "inner-upr__userbox--link" do
+              %span ログイン
+
+    .inner-lwr
+      .inner-lwr__link
+        =link_to schedules_path, class: "inner-lwr__link--schedule" do
+          =icon('far', 'calendar-alt',class:"icon-header")
+          %span スケジュール一覧
+        =link_to venues_path, class: "inner-lwr__link--venue" do
+          =icon('fas', 'drum-steelpan',class:"icon-header")
+          %span スタジアム一覧
+
+

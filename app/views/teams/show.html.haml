@@ -1,14 +1,33 @@
-.schedule-test
-  -@schedules.each do |schedule|
-    .schedule-box
-      .match-date
-        =schedule.match_date.strftime('%m月 %d日')
-      .match-time
-        =schedule.match_date.strftime('%H:%M')
-      .team-name
-      -if schedule.team1_id == @team.id
-        =link_to schedule_path(schedule) do
-          = schedule.team2.name
-      - else
-        =link_to schedule_path(schedule) do
-          = schedule.team1.name
+.TeamSchedule-wrapper
+  = render "shared/header-main"
+  .TeamSchedule-main
+    .TeamSchedule-inner
+      %section.TeamSchedule-inner__week
+        %h2.TeamSchedule-inner__week--title
+          今週のスケジュール
+        = week_calendar number_of_weeks: 1,  events: @schedules do |date, schedules|
+          = date.day
+          - schedules.each do |schedule|
+            .match-name
+              -if schedule.team1_id == @team.id
+                =link_to schedule_path(schedule) do
+                  = schedule.team2.name
+              - else
+                =link_to schedule_path(schedule) do
+                  = schedule.team1.name
+      %section.TeamSchedule-inner__month
+        %h2.TeamSchedule-inner__month--title
+          今月のスケジュール
+        = month_calendar events: @schedules do |date, schedules|
+          =date.day
+          - schedules.each do |schedule|
+            .match-name
+              -if schedule.team1_id == @team.id
+                =link_to schedule_path(schedule) do
+                  = schedule.team2.name
+              - else
+                =link_to schedule_path(schedule) do
+                  = schedule.team1.name
+
+  = render "shared/footer-main"
+  
