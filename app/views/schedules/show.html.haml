@@ -7,7 +7,9 @@
           = @schedule.match_date.strftime('%m月 %d日')
         .match-index__time
           = @schedule.match_date.strftime('%H:%M')
+          開始
         .match-index__stadium
+          会場
           = @schedule.venue.name
       .match-title
         %span
@@ -19,12 +21,13 @@
       .match-ticket
         - @stocks.each do |stock|
           .match-ticket__inner
-            .match-ticket_grade
-              = stock.seat_type
-            .match-ticket__price
-              =stock.price
-              円
-            .match-ticket__buy
+            .match-ticket__inner--upr
+              .ticket-grade
+                = stock.seat_type
+              .ticket-price
+                =stock.price
+                円
+            .match-ticket__inner--lwr
               =link_to "" do
                 枚数を選ぶ
           
