@@ -1,0 +1,23 @@
+.schedule-details{
+  max-width: 900px;
+  min-width: 350px;
+  margin: 20px auto 0;
+
+  &__inner{
+    padding: 30px;
+  }
+}
+
+.match-index{
+  display: flex;
+  font-size: 25px;
+
+}
+
+.match-title{
+  font-size: 30px;
+}
+.match-ticket{
+  display:flex;
+  
+}

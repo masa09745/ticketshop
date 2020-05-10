@@ -1,7 +1,7 @@
 .schedule-wrapper
   = render "shared/header-main"
-  .schedule-inner
-    .schedule-inner__match
+  .schedule-details
+    .schedule-details__inner
       .match-index
         .match-index__date
           = @schedule.match_date.strftime('%m月 %d日')
@@ -9,7 +9,7 @@
           = @schedule.match_date.strftime('%H:%M')
         .match-index__stadium
           = @schedule.venue.name
-      .match-name
+      .match-title
         %span
           = @schedule.team1.name
         %span
@@ -18,13 +18,14 @@
           = @schedule.team2.name
       .match-ticket
         - @stocks.each do |stock|
-          .match-ticket_grade
-            = stock.seat_type
-          .match-ticket__price
-            =stock.price
-            円
-          .match-ticket__buy
-            =link_to "" do
-              枚数を選ぶ
+          .match-ticket__inner
+            .match-ticket_grade
+              = stock.seat_type
+            .match-ticket__price
+              =stock.price
+              円
+            .match-ticket__buy
+              =link_to "" do
+                枚数を選ぶ
           
 = render "shared/footer-main"
