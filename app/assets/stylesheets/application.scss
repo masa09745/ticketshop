@@ -12,6 +12,10 @@
 @import 'shared/header-user';
 @import 'shared/footer-main';
 @import 'modules/signup-form';
+@import 'modules/order-main';
+@import 'modules/order-inner';
+
+
 
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
@@ -21,7 +25,10 @@ a, a:visited, a:focus, a:hover {
   text-decoration: none;
 }
 
-
+@font-face{
+  font-family: "bananaslip";
+  src: font-url('bananaslip.otf') format('opentype');
+}
 
 
 .font-red{

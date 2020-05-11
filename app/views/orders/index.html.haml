@@ -1,28 +1,26 @@
-= render "shared/header_main"
-.buy-wrapper
-  .buy-inner
-    .buy-inner__top
-      戻る
-    .buy-inner__main
-      .buy-title
-        チケット購入ページ
-      .buy-form
-        .buy-form__inner
-          .match-name
-            %label 試合名
-            %p
-              = @schedule.team1.name
-            %p VS
-            %p
-              =@schedule.team2.name
-          .match-venue
-            %label 会場
-            %p Aスタジアム
-          .match-date
-            %label 試合日
-            %p
-              = @schedule.match_date.strftime('%m月 %d日')
-          .match-time
-            %label 開始
-            %p
-              = @schedule.match_date.strftime('%H:%M')
+.order-wrapper
+  = render "shared/header-main"
+  .order-main
+    .order-main__title
+      チケット注文
+    .order-main__form
+      .match-details
+        .match-details__name
+          %label 試合名
+          %span
+            = @schedule.team1.name
+          %span VS
+          %span
+            =@schedule.team2.name
+        .match-details__stadiaum
+          %label 会場
+          %span
+            = @schedule.venue.name
+        .match-details__date
+          %label 試合日
+          %span
+            = @schedule.match_date.strftime('%m月 %d日')
+        .match-details__time
+          %label 開始
+          %span
+            = @schedule.match_date.strftime('%H:%M')

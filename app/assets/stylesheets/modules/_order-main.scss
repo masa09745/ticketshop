@@ -1,0 +1,25 @@
+.order-wrapper{
+  font-family: "bananaslip";
+}
+
+.order-main{
+  max-width: 900px;
+  min-width: 350px;
+  margin: 20px auto 0;
+  padding: 30px 60px;
+
+  &__title{
+    font-size: 45px;
+    border-bottom: solid 3px #dddddd;
+  }
+
+  &__form{
+    width: 500px;
+    margin: 20px auto;
+  }
+}
+
+.match-details{
+  font-size: 25px;
+  
+}
