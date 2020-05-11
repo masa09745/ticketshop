@@ -1,6 +1,5 @@
 class OrdersController < ApplicationController
   before_action :set_schedule, only: [:index,:new]
-  before_action :set_team, only: [:index, :new]
 
   def index
     @order = Order.new
@@ -28,7 +27,4 @@ class OrdersController < ApplicationController
     @schedule = Schedule.find(params[:schedule_id])
   end
 
-  def set_team
-    @team = Team.find(params[:team_id])
-  end
 end

@@ -13,16 +13,16 @@
 @import 'shared/footer-main';
 @import 'modules/signup-form';
 
-@import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
-
-
-
+@import "bootstrap";
 a, a:visited, a:focus, a:hover {
-  text-decoration: none;
   color: #333333;
+  text-decoration: none;
 }
+
+
+
 
 .font-red{
   color: red;
