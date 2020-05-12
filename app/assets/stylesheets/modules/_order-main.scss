@@ -1,17 +1,24 @@
+.order-wrapper{
+  font-family: "bananaslip";
+}
+
 .order-main{
-  max-width: 900px;
-  min-width: 350px;
+  max-width: 750px;
+  min-width: 300px;
   margin: 20px auto 0;
   padding: 30px 60px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic',
+  'メイリオ', 'Meiryo', sans-serif;
 
   &__title{
-    font-size: 45px;
+    font-size: 32px;
     border-bottom: solid 3px #dddddd;
     font-family: "bananaslip";
   }
 
   &__form{
-    width: 500px;
+    max-width: 500px;
+    min-width: 300px;
     margin: 20px auto;
   }
 }
