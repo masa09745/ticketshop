@@ -1,8 +1,7 @@
 class Order < ApplicationRecord
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to_active_hash :grade
   belongs_to :user
   belongs_to :schedule
+  belongs_to :stock, optional: true
 
   has_many :tickets
 

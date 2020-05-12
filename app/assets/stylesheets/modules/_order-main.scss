@@ -1,0 +1,65 @@
+.order-wrapper{
+  font-family: "bananaslip";
+}
+
+.order-main{
+  max-width: 750px;
+  min-width: 300px;
+  margin: 20px auto 0;
+  padding: 30px 60px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic',
+  'メイリオ', 'Meiryo', sans-serif;
+
+  &__title{
+    font-size: 32px;
+    border-bottom: solid 3px #dddddd;
+    font-family: "bananaslip";
+  }
+
+  &__form{
+    max-width: 500px;
+    min-width: 300px;
+    margin: 20px auto;
+  }
+}
+
+.order-form{
+  font-size: 23px;
+
+}
+
+.order-form__name{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-form__stadium{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-form__date{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-form__time{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-form__grade{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-form__count{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}

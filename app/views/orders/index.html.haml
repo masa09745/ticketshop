@@ -1,28 +1,41 @@
-= render "shared/header_main"
-.buy-wrapper
-  .buy-inner
-    .buy-inner__top
-      戻る
-    .buy-inner__main
-      .buy-title
-        チケット購入ページ
-      .buy-form
-        .buy-form__inner
-          .match-name
-            %label 試合名
-            %p
+.order-wrapper
+  = render "shared/header-main"
+  .order-main
+    .order-main__title
+      チケット注文
+    .order-main__form
+      = form_with(model:[@schedule, @order], local:true, class: "order-form")do |f|
+        .order-form__name
+          %label.order-form__name--label 試合名
+          .order-form__name--text
+            %span
               = @schedule.team1.name
-            %p VS
-            %p
+            %span VS
+            %span
               =@schedule.team2.name
-          .match-venue
-            %label 会場
-            %p Aスタジアム
-          .match-date
-            %label 試合日
-            %p
+        .order-form__stadium
+          %label.order-form__stadium--label 会場
+          .order-form__stadium--text
+            %span
+              = @schedule.venue.name
+        .order-form__date
+          %label.order-form__date--label 試合日
+          .order-form__date--text
+            %span
               = @schedule.match_date.strftime('%m月 %d日')
-          .match-time
-            %label 開始
-            %p
+        .order-form__time
+          %label.order-form__time--label 開始
+          .order-form__time--text
+            %span
               = @schedule.match_date.strftime('%H:%M')
+        .order-form__grade
+          %label.order-form__grade--label 席種
+          .order-form__grade--text
+            = f.select :seat_type, @stocks.map{|stock|[stock.seat_type, stock.seat_type]}
+        .order-form__count
+          %label.order-form__count--label 枚数
+          .order-form__count--text
+            = f.text_field :ticket_count
+        .order-form__btn
+          =f.submit "注文する"
+

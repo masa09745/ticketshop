@@ -14,8 +14,7 @@
       .match-title
         %span
           = @schedule.team1.name
-        %span
-          VS
+        %span VS
         %span
           = @schedule.team2.name
       .match-ticket
@@ -30,5 +29,5 @@
             .match-ticket__inner--lwr
               =link_to schedule_orders_path(@schedule) do
                 枚数を選ぶ
-          
+
 = render "shared/footer-main"

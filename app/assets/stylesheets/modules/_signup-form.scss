@@ -1,7 +1,10 @@
+.signup-wrapper{
+  font-family: "bananaslip";
+}
+
 .signup-form{
   width: 700px;
   margin: 0 auto;
-  
 
   &__title{
     border-bottom: solid 3px #dcdcdc;
@@ -16,6 +19,8 @@
 .signup-user, .signup-credit{
   width: 350px;
   margin: 0 auto;
+  font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic',
+  'メイリオ', 'Meiryo', sans-serif;
 }
 
 .form-group{

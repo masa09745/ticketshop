@@ -3,18 +3,18 @@ class OrdersController < ApplicationController
 
   def index
     @order = Order.new
+    @stocks = Stock.where(schedule_id:[params[:schedule_id]])
   end
 
   def new
     @order = Order.new
-    @grade = Grade.all
     @order.tickets.build
 
   end
 
   def create
     @order = Order.new(order_params)
-    @order.save
+    @order.save!
       redirect_to root_path
   end
 
