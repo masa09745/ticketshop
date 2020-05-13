@@ -2,7 +2,7 @@ class SchedulesController < ApplicationController
 
 
   def index
-    @schedules = Schedule.all
+    @schedules = Schedule.all.includes(:team1, :team2)
 
   end
 
