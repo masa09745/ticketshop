@@ -1,0 +1,30 @@
+.venue-wrapper{
+  font-family: "bananaslip";
+}
+
+.venue-main{
+  max-width: 900px;
+  min-width: 350px;
+  margin: 20px auto 0;
+}
+
+.venue-inner{
+  width: 700px;
+  margin: 0 auto;
+
+  &__title{
+    font-size: 35px;
+    border-bottom: solid 3px #dddddd;
+  }
+
+  &__contents{
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.venue-info{
+  margin-bottom: 15px;
+}
