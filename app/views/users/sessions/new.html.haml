@@ -1,20 +1,4 @@
 .signin-wrapper
   = render "users/shared/header_user"
-  .signin-main
-    %span.signin-title ログイン
-    .signin-inner
-      .signin-form
-        = form_with model: @user, url: new_user_session_path, id: 'new_user', class: 'signin-user s12', local: true do |f|
-          .signin-user__inner.row
-            .input-field.col.s6
-              %i.material-icons.prefix email
-              = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "例) xxx@exsample.com"
-              %label{for:"email"} メールアドレス
-          .signin-user__inner.row
-            .input-field.col.s4
-              %i.material-icons.prefix lock_outline
-              = f.password_field :password, autofocus: true, autocomplete: "password", placeholder: "例) 6文字以上の英数字"
-              %label{:for => "password"} パスワード
-          .signin-user__button
-            =f.submit "ログイン", class:"waves-effectv waves-light btn-large indigo"
+  = render "users/shared/signin-form"
   = render "/shared/footer-main"
