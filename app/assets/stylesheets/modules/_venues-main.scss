@@ -9,16 +9,15 @@
 }
 
 .venue-inner{
-  width: 700px;
-  margin: 0 auto;
-
   &__title{
     font-size: 35px;
     border-bottom: solid 3px #dddddd;
   }
 
   &__contents{
-    padding: 20px 35px;
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
