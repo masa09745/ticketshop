@@ -21,9 +21,21 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic',
+    'メイリオ', 'Meiryo', sans-serif;
   }
 }
 
 .venue-info{
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+
+  &__text{
+    font-size: 18px;
+    padding: 5px;
+
+    span{
+      margin-right: 15px;
+
+    }
+  }
 }
