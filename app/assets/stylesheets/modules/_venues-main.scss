@@ -5,7 +5,7 @@
 .venue-main{
   max-width: 900px;
   min-width: 350px;
-  margin: 20px auto 0;
+  margin: 20px auto;
 }
 
 .venue-inner{
@@ -16,7 +16,7 @@
 
   &__contents{
     width: 700px;
-    margin: 0 auto;
+    margin: 0px auto;
     padding: 20px;
     display: flex;
     justify-content: space-between;

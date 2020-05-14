@@ -1,25 +1,19 @@
-.stadium-wrapper
+.venue-wrapper
   = render "shared/header-main"
-  .stadium-inner
-    .stadium-inner__top
-      =link_to schedules_path do
-        %span スケジュール一覧
-      =link_to venue_path do
-        %span スタジアム一覧
-    .stadium-inner__contents
-      .stadium-name
-        %span Aスタジアム
-      .stadium-box
-        .stadium-box__thumbnail
-          = image_tag @venue.image.url, class: 'stadium-image'
-        .stadium-box__text
-          .stadium-address
-            %span 住所
-            %p
-              = @venue.address
-          .stadium-access
-            %span アクセス
-            %p 〇〇駅からバスで15分
-          .stadium-notice
-            %p ※席種に関しましてはサムネイルにてご確認ください
+  .venue-details
+    .venue-details__name
+      %h2 Aスタジアム
+    .venue-details__contents
+      .stadium-box__thumbnail
+        = image_tag @venue.image.url, class: 'stadium-image'
+      .stadium-box__text
+        .stadium-address
+          %span 住所
+          %p
+            = @venue.address
+        .stadium-access
+          %span アクセス
+          %p 〇〇駅からバスで15分
+        .stadium-notice
+          %p ※席種に関しましてはサムネイルにてご確認ください
   = render "shared/footer-main"
