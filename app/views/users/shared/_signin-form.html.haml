@@ -1,0 +1,21 @@
+.signin-form
+  %h2.signin-form__title
+    ログイン
+  .signin-form__inner
+    = form_with model: @user, url: new_user_session_path, id: 'new_user', class: 'signin-user', local: true do |f|
+      .signin-user__mail
+        .form-group
+          .form-group__text
+            %label メールアドレス
+            %span.form-group__text--red 必須
+          .form-group__input
+            =f.email_field :email, class: "form-control", placeholder: "例) xxx@example.com",  autocomplete: "email"
+      .signin-user__mail
+        .form-group
+          .form-group__text
+            %label パスワード
+            %span.form-group__text--red 必須
+          .form-group__input
+            = f.password_field :password, autocomplete: "password", class: "form-control", placeholder: "例) 6文字以上の英数字"
+      .signin-user__button
+        =f.submit "ログイン", class:"btn btn-primary btn-lg"

@@ -1,0 +1,25 @@
+.signup-wrapper{
+  font-family: "bananaslip";
+}
+
+.signin-form{
+  max-width: 700px;
+  min-width: 300px;
+  margin: 0 auto;
+
+  &__title{
+    border-bottom: solid 3px #dcdcdc;
+    font-family: "bananaslip";
+  }
+
+  &__inner{
+    padding: 20px 15px;
+  }
+}
+
+.signin-user{
+  width: 350px;
+  margin: 0 auto;
+  font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic',
+  'メイリオ', 'Meiryo', sans-serif;
+}
