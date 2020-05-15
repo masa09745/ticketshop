@@ -1,19 +1,16 @@
-= render "shared/header_main"
-.stadium-wrapper
-  .stadium-inner
-    .stadium-inner__top
-      =link_to schedules_path do
-        %span スケジュール一覧
-    .stadium-inner__contents
-      .stadium-title
-        %span スタジアム一覧
-      .stadium-main
+.venue-wrapper
+  = render "shared/header-main"
+  .venue-main
+    .venue-inner
+      %h2.venue-inner__title スタジアム一覧
+      .venue-inner__contents
         - @venues.each do |venue|
-          .stadium-info
-            .stadium-info__thumbnail
-              = image_tag venue.image.url, class: 'stadium-image'
-            .stadium-info__text
+          .venue-info
+            .venue-info__thumbnail
+              = image_tag venue.image.url, class: 'venue-image'
+            .venue-info__text
               %span
                 =venue.name
               =link_to venue_path(venue) do
                 %span 詳細
+  = render "shared/footer-main"
