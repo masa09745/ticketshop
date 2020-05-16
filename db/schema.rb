@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 2020_04_18_164415) do
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "seat_type"
-    t.integer "ticket_count", null: false
     t.bigint "user_id", null: false
     t.bigint "schedule_id", null: false
     t.datetime "created_at", null: false
@@ -61,12 +60,14 @@ ActiveRecord::Schema.define(version: 2020_04_18_164415) do
   end
 
   create_table "tickets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "row"
+    t.string "seat_number"
     t.bigint "order_id", null: false
-    t.bigint "schedule_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_tickets_on_order_id"
-    t.index ["schedule_id"], name: "index_tickets_on_schedule_id"
+    t.index ["user_id"], name: "index_tickets_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -101,5 +102,5 @@ ActiveRecord::Schema.define(version: 2020_04_18_164415) do
   add_foreign_key "stock_details", "stocks"
   add_foreign_key "stocks", "schedules"
   add_foreign_key "tickets", "orders"
-  add_foreign_key "tickets", "schedules"
+  add_foreign_key "tickets", "users"
 end
