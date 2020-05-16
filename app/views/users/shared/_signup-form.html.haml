@@ -38,12 +38,5 @@
             %span.form-group__text--red 必須
           .form-group__input
             = f.password_field :password, autocomplete: "password", class: "form-control", placeholder: "例) 6文字以上の英数字"
-      .signup-user__favorite
-        .form-group
-          .form-group__text
-            %label 好きなチーム
-            %span.form-group__text--red 必須
-          .form-group__input
-            = f.text_field :favorite, autocomplete: "favorite",class: "form-control", placeholder: "チームA"
       .signup-user__button
         =f.submit "次へ", class:"btn btn-primary btn-lg"
