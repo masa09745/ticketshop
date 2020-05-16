@@ -31,11 +31,7 @@
         .order-form__grade
           %label.order-form__grade--label 席種
           .order-form__grade--text
-            = f.select :seat_type, @stocks.map{|stock|[stock.seat_type, stock.seat_type]}
-        .order-form__count
-          %label.order-form__count--label 枚数
-          .order-form__count--text
-            = f.text_field :ticket_count
+            = f.collection_select(:seat_type, @stocks, :seat_type, :seat_type)
         .order-form__btn
           =f.submit "注文する"
 
