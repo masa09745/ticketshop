@@ -20,7 +20,7 @@ class OrdersController < ApplicationController
 
   private
   def order_params
-    params.require(:order).permit(:seat_type, :ticket_count).merge(user_id: current_user.id, schedule_id: params[:schedule_id])
+    params.require(:order).permit(:seat_type).merge(user_id: current_user.id, schedule_id: params[:schedule_id])
   end
 
   def set_schedule
