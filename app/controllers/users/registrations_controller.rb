@@ -14,7 +14,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     session[:email] = user_params[:email]
     session[:password] = user_params[:password]
     session[:password_confirmation] = user_params[:password_confirmation]
-    session[:favorite] = user_params[:favorite]
+
 
     @user = User.new
   end
@@ -28,10 +28,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
       name_kana: session[:name_kana],
       email: session[:email],
       password: session[:password],
-      password_confirmation: session[:password_confirmation],
-      favorite: session[:favorite]
-
+      password_confirmation: session[:password_confirmation]
     )
+
     if @user.save
       user = @user
       session[:id] = @user.id
@@ -50,8 +49,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       :name_kana,
       :email,
       :password,
-      :password_confirmation,
-      :favorite
+      :password_confirmation
     )
   end
 end
