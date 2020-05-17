@@ -1,0 +1,11 @@
+.mypage-menu{
+  font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic',
+  'メイリオ', 'Meiryo', sans-serif;
+  padding: 10px;
+  display: flex;
+
+  &__list{
+    margin-right: 10px;
+    font-size: 20px;
+  }
+}
