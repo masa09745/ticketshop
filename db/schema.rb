@@ -45,11 +45,9 @@ ActiveRecord::Schema.define(version: 2020_05_18_193121) do
     t.string "row"
     t.string "number"
     t.bigint "schedule_id", null: false
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["schedule_id"], name: "index_tickets_on_schedule_id"
-    t.index ["user_id"], name: "index_tickets_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -80,5 +78,4 @@ ActiveRecord::Schema.define(version: 2020_05_18_193121) do
   add_foreign_key "schedules", "teams", column: "team2_id"
   add_foreign_key "schedules", "venues"
   add_foreign_key "tickets", "schedules"
-  add_foreign_key "tickets", "users"
 end
