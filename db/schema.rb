@@ -10,15 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_18_164415) do
+ActiveRecord::Schema.define(version: 2020_04_17_040004) do
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "seat_type"
+    t.bigint "ticket_id", null: false
     t.bigint "user_id", null: false
-    t.bigint "schedule_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["schedule_id"], name: "index_orders_on_schedule_id"
+    t.index ["ticket_id"], name: "index_orders_on_ticket_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -34,23 +33,6 @@ ActiveRecord::Schema.define(version: 2020_04_18_164415) do
     t.index ["venue_id"], name: "index_schedules_on_venue_id"
   end
 
-  create_table "stock_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "price"
-    t.bigint "stock_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["stock_id"], name: "index_stock_details_on_stock_id"
-  end
-
-  create_table "stocks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "seat_type", null: false
-    t.integer "ticket_stock"
-    t.bigint "schedule_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["schedule_id"], name: "index_stocks_on_schedule_id"
-  end
-
   create_table "teams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -58,14 +40,14 @@ ActiveRecord::Schema.define(version: 2020_04_18_164415) do
   end
 
   create_table "tickets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "grade", null: false
+    t.integer "price", null: false
     t.string "row"
-    t.string "seat_number"
-    t.bigint "order_id", null: false
-    t.bigint "user_id", null: false
+    t.string "number"
+    t.bigint "schedule_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["order_id"], name: "index_tickets_on_order_id"
-    t.index ["user_id"], name: "index_tickets_on_user_id"
+    t.index ["schedule_id"], name: "index_tickets_on_schedule_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -90,13 +72,10 @@ ActiveRecord::Schema.define(version: 2020_04_18_164415) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "orders", "schedules"
+  add_foreign_key "orders", "tickets"
   add_foreign_key "orders", "users"
   add_foreign_key "schedules", "teams", column: "team1_id"
   add_foreign_key "schedules", "teams", column: "team2_id"
   add_foreign_key "schedules", "venues"
-  add_foreign_key "stock_details", "stocks"
-  add_foreign_key "stocks", "schedules"
-  add_foreign_key "tickets", "orders"
-  add_foreign_key "tickets", "users"
+  add_foreign_key "tickets", "schedules"
 end

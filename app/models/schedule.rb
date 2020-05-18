@@ -3,9 +3,7 @@ class Schedule < ApplicationRecord
     self.match_date
   end
 
-  has_many :stocks
-  has_many :stock_details
-  has_many :orders
+  has_many :tickets
 
   belongs_to :venue
   belongs_to :team1, class_name: 'Team', foreign_key: 'team1_id'
