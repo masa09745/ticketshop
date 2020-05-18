@@ -4,6 +4,7 @@ class Schedule < ApplicationRecord
   end
 
   has_many :stocks
+  has_many :stock_details
   has_many :orders
 
   belongs_to :venue

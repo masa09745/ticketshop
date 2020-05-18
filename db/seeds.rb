@@ -236,3 +236,17 @@ Stock.create!(
     {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '26'},
   ]
 )
+
+10.times do
+  StockDetail.create!(
+    stock_id: '1',
+    schedule_id: '1'
+  )
+end
+
+20.times do
+  StockDetail.create!(
+    stock_id: '2',
+    schedule_id: '1'
+  )
+end
