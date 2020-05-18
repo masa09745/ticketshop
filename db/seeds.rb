@@ -128,125 +128,27 @@ Schedule.create!(
   ]
 )
 
-Stock.create!(
-  [
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '1'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '1'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '1'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '1'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '2'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '2'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '2'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '2'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '3'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '3'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '3'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '3'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '4'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '4'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '4'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '4'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '5'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '5'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '5'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '5'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '6'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '6'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '6'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '6'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '7'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '7'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '7'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '7'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '8'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '8'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '8'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '8'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '9'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '9'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '9'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '9'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '10'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '10'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '10'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '10'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '11'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '11'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '11'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '11'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '12'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '12'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '12'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '12'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '13'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '13'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '13'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '13'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '14'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '14'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '14'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '14'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '15'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '15'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '15'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '15'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '16'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '16'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '16'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '16'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '17'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '17'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '17'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '17'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '18'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '18'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '18'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '18'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '19'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '19'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '19'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '19'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '20'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '20'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '20'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '20'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '21'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '21'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '21'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '21'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '22'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '22'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '22'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '22'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '23'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '23'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '23'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '23'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '24'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '24'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '24'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '24'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '25'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '25'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '25'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '25'},
-    {seat_type:'SS', ticket_stock: '10', price: '10000', schedule_id: '26'},
-    {seat_type:'S', ticket_stock: '20', price: '8000', schedule_id: '26'},
-    {seat_type:'A', ticket_stock: '30', price: '5000', schedule_id: '26'},
-    {seat_type:'B', ticket_stock: '50', price: '3000', schedule_id: '26'},
-  ]
-)
+10.times do |n|
+  Stock.create!(
+    [
+      {seat_type:"SS", ticket_stock: "10", schedule_id: "#{n + 1}"},
+      {seat_type:"S", ticket_stock: "20", schedule_id: "#{n + 1}"},
+      {seat_type:"A", ticket_stock: "30", schedule_id: "#{n + 1}"},
+      {seat_type:"B", ticket_stock: "50", schedule_id: "#{n + 1}"}
+    ]
+  )
+end
 
 10.times do
   StockDetail.create!(
-    stock_id: '1',
-    schedule_id: '1'
+    price: "10000",
+    stock_id: "1",
   )
 end
 
 20.times do
   StockDetail.create!(
+    price: "8000",
     stock_id: '2',
-    schedule_id: '1'
   )
 end
