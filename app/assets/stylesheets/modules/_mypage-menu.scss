@@ -1,11 +1,10 @@
 .mypage-menu{
-  font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic',
-  'メイリオ', 'Meiryo', sans-serif;
+  font-size: 20px;
   padding: 10px;
-  display: flex;
 
-  &__list{
-    margin-right: 10px;
-    font-size: 20px;
+
+  &__ticket, &__user, &__credit{
+    margin-bottom: 10px;
+
   }
 }
