@@ -132,7 +132,7 @@ Schedule.create!(
   Ticket.create!(
     grade: "SS",
     price: "10000",
-    schedule_id: "1"
+    schedule_id: "1",
   )
 end
 
@@ -140,7 +140,7 @@ end
   Ticket.create!(
     grade: "S",
     price: "8000",
-    schedule_id: "1"
+    schedule_id: "1",
   )
 end
 
@@ -148,7 +148,7 @@ end
   Ticket.create!(
     grade: "A",
     price: "5000",
-    schedule_id: "1"
+    schedule_id: "1",
   )
 end
 
@@ -156,6 +156,6 @@ end
   Ticket.create!(
     grade: "B",
     price: "3000",
-    schedule_id: "1"
+    schedule_id: "1",
   )
 end
