@@ -127,35 +127,3 @@ Schedule.create!(
     {team1_id:'4', team2_id:'5', match_date: '2020-06-03 18:00', venue_id: '4'},
   ]
 )
-
-10.times do
-  Ticket.create!(
-    grade: "SS",
-    price: "10000",
-    schedule_id: "1",
-  )
-end
-
-20.times do
-  Ticket.create!(
-    grade: "S",
-    price: "8000",
-    schedule_id: "1",
-  )
-end
-
-30.times do
-  Ticket.create!(
-    grade: "A",
-    price: "5000",
-    schedule_id: "1",
-  )
-end
-
-50.times do
-  Ticket.create!(
-    grade: "B",
-    price: "3000",
-    schedule_id: "1",
-  )
-end
