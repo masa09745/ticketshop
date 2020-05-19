@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :teams, only:[:index, :show]
 
   resources :schedules, only:[:index, :show] do
-    resources :orders
+    resources :tickets, :stocks
   end
 
   resources :venues, only: [:index, :show]

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_18_193121) do
+ActiveRecord::Schema.define(version: 2020_05_19_141728) do
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -31,6 +31,16 @@ ActiveRecord::Schema.define(version: 2020_05_18_193121) do
     t.index ["team1_id"], name: "index_schedules_on_team1_id"
     t.index ["team2_id"], name: "index_schedules_on_team2_id"
     t.index ["venue_id"], name: "index_schedules_on_venue_id"
+  end
+
+  create_table "stocks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "grade", null: false
+    t.integer "price", null: false
+    t.integer "ticket_count", null: false
+    t.bigint "schedule_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["schedule_id"], name: "index_stocks_on_schedule_id"
   end
 
   create_table "teams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -77,5 +87,6 @@ ActiveRecord::Schema.define(version: 2020_05_18_193121) do
   add_foreign_key "schedules", "teams", column: "team1_id"
   add_foreign_key "schedules", "teams", column: "team2_id"
   add_foreign_key "schedules", "venues"
+  add_foreign_key "stocks", "schedules"
   add_foreign_key "tickets", "schedules"
 end

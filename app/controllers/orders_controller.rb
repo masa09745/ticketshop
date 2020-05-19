@@ -3,7 +3,6 @@ class OrdersController < ApplicationController
 
   def index
     @order = Order.new
-    @stocks = Stock.where(schedule_id:[params[:schedule_id]])
   end
 
   def new

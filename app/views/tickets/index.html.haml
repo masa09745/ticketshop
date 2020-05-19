@@ -1,34 +1,36 @@
-= render "shared/header_main"
-.ticktet-wrapper
-  .ticket-inner
-    .ticket-inner__top
-      =link_to schedules_path do
-        %span スケジュール一覧
-      =link_to venues_path do
-        %span スタジアム一覧
-
-    .ticket-inner__weeks
-      %span 最近の試合
-      .match-box
-        - @matches.each do |match|
-          .match-box__inner
-            .match-date
-              = match.match_date.strftime('%m月 %d日')
-            .match-time
-              = match.match_date.strftime('%H:%M')
-            .match-name
-              =link_to schedule_path(match) do
-                = match.match_name
-
-    .ticket-inner__month
-      %span その他の試合
-      .calender
-        = week_calendar number_of_weeks: 2, events: @fullmatches do |date, fullmatches|
-          = date.day
-          - fullmatches.each do |fullmatch|
-            .match-name
-              = link_to schedule_path(fullmatch) do
-                = fullmatch.match_name
-= render "shared/footer_main"
-
-
+.order-wrapper
+  = render "shared/header-main"
+  .order-main
+    .order-main__title
+      チケット注文
+    .order-main__form
+      = form_for([@schedule, @ticket], class: "order-form") do |f|
+        .order-form__name
+          %label.order-form__name--label 試合名
+          .order-form__name--text
+            %span
+              = @schedule.team1.name
+            %span VS
+            %span
+              =@schedule.team2.name
+        .order-form__stadium
+          %label.order-form__stadium--label 会場
+          .order-form__stadium--text
+            %span
+              = @schedule.venue.name
+        .order-form__date
+          %label.order-form__date--label 試合日
+          .order-form__date--text
+            %span
+              = @schedule.match_date.strftime('%m月 %d日')
+        .order-form__time
+          %label.order-form__time--label 開始
+          .order-form__time--text
+            %span
+              = @schedule.match_date.strftime('%H:%M')
+        .order-form__grade
+          %label.order-form__grade--label 席種
+          .order-form__grade--text
+            = @tickets.grade
+        .order-form__btn
+          =f.submit "注文する", class:"btn btn-secondary btn-lg btn-block"
