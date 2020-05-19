@@ -7,8 +7,9 @@ class StocksController < ApplicationController
 
   def create
     @stock = Stock.new(stock_params)
+    @schedule = Schedule.find(params[:schedule_id])
     @stock.save!
-    redirect_to root_path
+      redirect_to  schedule_stocks_path(@schedule)
   end
 
 

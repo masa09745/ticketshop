@@ -3,7 +3,6 @@ class TicketsController < ApplicationController
 
   def index
     @ticket = Ticket.new
-    @tickets = Ticket.find_by(schedule_id:[params[:schedule_id]])
   end
 
   def show

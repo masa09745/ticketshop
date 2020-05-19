@@ -127,3 +127,14 @@ Schedule.create!(
     {team1_id:'4', team2_id:'5', match_date: '2020-06-03 18:00', venue_id: '4'},
   ]
 )
+
+87.times do |n|
+  Stock.create!(
+    [
+      {grade:"SS", ticket_count: "10", price: "10000", schedule_id: "#{n + 1}"},
+      {grade:"S", ticket_count: "20", price: "8000", schedule_id: "#{n + 1}"},
+      {grade:"A", ticket_count: "30", price: "5000", schedule_id: "#{n + 1}"},
+      {grade:"B", ticket_count: "50", price: "3000", schedule_id: "#{n + 1}"}
+    ]
+  )
+end
