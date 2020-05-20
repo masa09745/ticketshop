@@ -4,7 +4,7 @@
     .order-main__title
       チケット注文
     .order-main__form
-      = form_with(model:[@schedule, @order], local:true, class: "order-form")do |f|
+      = form_with(model:[@schedule, @stock, @order], local:true, class: "order-form")do |f|
         .order-form__name
           %label.order-form__name--label 試合名
           .order-form__name--text
@@ -31,6 +31,18 @@
         .order-form__grade
           %label.order-form__grade--label 席種
           .order-form__grade--text
+            %span
+              = @stock.grade
+        .order-form__grade
+          %label.order-form__price--label 金額
+          .order-form__price--text
+            %span
+              = @stock.price
+              円
+        .order-form__grade
+          %label.order-form__count--label 枚数
+          .order-form__count--text
+            = f.text_field :count
         .order-form__btn
           =f.submit "注文する", class:"btn btn-secondary btn-lg btn-block"
 

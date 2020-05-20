@@ -27,7 +27,7 @@
                 =stock.price
                 円
             .match-ticket__inner--lwr
-              =link_to schedule_tickets_path(@schedule) do
+              =link_to schedule_stock_orders_path(@schedule, stock) do
                 枚数を選ぶ
       .stock
         = link_to schedule_stocks_path(@schedule) do
