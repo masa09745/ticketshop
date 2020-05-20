@@ -3,7 +3,6 @@ class OrdersController < ApplicationController
 
   def index
     @order = Order.new
-    @stocks = Stock.where(schedule_id:[params[:schedule_id]])
   end
 
   def new
@@ -20,11 +19,12 @@ class OrdersController < ApplicationController
 
   private
   def order_params
-    params.require(:order).permit(:seat_type).merge(user_id: current_user.id, schedule_id: params[:schedule_id])
+    params.require(:order).permit(:count).merge(user_id: current_user.id, stock_id: params[:stock_id])
   end
 
   def set_schedule
     @schedule = Schedule.find(params[:schedule_id])
+    @stock = Stock.find(params[:stock_id])
   end
 
 end

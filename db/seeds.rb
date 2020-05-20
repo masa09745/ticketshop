@@ -128,27 +128,13 @@ Schedule.create!(
   ]
 )
 
-10.times do |n|
+87.times do |n|
   Stock.create!(
     [
-      {seat_type:"SS", ticket_stock: "10", schedule_id: "#{n + 1}"},
-      {seat_type:"S", ticket_stock: "20", schedule_id: "#{n + 1}"},
-      {seat_type:"A", ticket_stock: "30", schedule_id: "#{n + 1}"},
-      {seat_type:"B", ticket_stock: "50", schedule_id: "#{n + 1}"}
+      {grade:"SS", ticket_count: "10", price: "10000", schedule_id: "#{n + 1}"},
+      {grade:"S", ticket_count: "20", price: "8000", schedule_id: "#{n + 1}"},
+      {grade:"A", ticket_count: "30", price: "5000", schedule_id: "#{n + 1}"},
+      {grade:"B", ticket_count: "50", price: "3000", schedule_id: "#{n + 1}"}
     ]
-  )
-end
-
-10.times do
-  StockDetail.create!(
-    price: "10000",
-    stock_id: "1",
-  )
-end
-
-20.times do
-  StockDetail.create!(
-    price: "8000",
-    stock_id: '2',
   )
 end
