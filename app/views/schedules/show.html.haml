@@ -18,19 +18,9 @@
         %span
           = @schedule.team2.name
       .match-ticket
-        - @stocks.each do |stock|
-          .match-ticket__inner
-            .match-ticket__inner--upr
-              .ticket-grade
-                = stock.grade
-              .ticket-price
-                =stock.price
-                円
-            .match-ticket__inner--lwr
-              =link_to schedule_stock_orders_path(@schedule, stock) do
-                枚数を選ぶ
+        = render partial:'stocks/index'
       .stock
-        = link_to schedule_stocks_path(@schedule) do
+        = link_to "" do
           在庫管理
 
 = render "shared/footer-main"

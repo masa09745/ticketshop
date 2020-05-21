@@ -1,8 +1,7 @@
 class StocksController < ApplicationController
 
   def index
-    @schedule = Schedule.find(params[:schedule_id])
-    @stock = Stock.new
+    @stocks = Stock.where(schedule_id:[params[:schedule_id]])
   end
 
   def create

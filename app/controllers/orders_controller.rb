@@ -24,7 +24,7 @@ class OrdersController < ApplicationController
 
   def set_schedule
     @schedule = Schedule.find(params[:schedule_id])
-    @stock = Stock.find(params[:stock_id])
+    @stock = Stock.find(params[:schedule_id])
   end
 
 end

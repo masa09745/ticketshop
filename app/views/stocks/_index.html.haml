@@ -1,0 +1,11 @@
+- @stocks.each do |stock|
+  .match-ticket__inner
+    .match-ticket__inner--upr
+      .ticket-grade
+        = stock.grade
+      .ticket-price
+        =stock.price
+        円
+    .match-ticket__inner--lwr
+      =link_to schedule_orders_path(@schedule) do
+        枚数を選ぶ
