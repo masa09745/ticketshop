@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
   var price = $("#ticket-price").val();
   var count = $("#ticket-count");
   var totalprice = $("#jsTotal");

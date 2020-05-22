@@ -3,12 +3,7 @@ class OrdersController < ApplicationController
 
   def index
     @order = Order.new
-  end
-
-  def new
-    @order = Order.new
     @order.tickets.build
-
   end
 
   def create
@@ -19,7 +14,7 @@ class OrdersController < ApplicationController
 
   private
   def order_params
-    params.require(:order).permit(:count).merge(user_id: current_user.id, stock_id: params[:stock_id])
+    params.require(:order).permit(:count, tickets_attributes: [:id,:grade,:price,:user_id]).merge(user_id: current_user.id, stock_id: params[:stock_id])
   end
 
   def set_stock
