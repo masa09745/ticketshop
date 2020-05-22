@@ -4,30 +4,30 @@
     .order-main__title
       チケット注文
     .order-main__form
-      = form_with(model:[@schedule, @order], local:true, class: "order-form")do |f|
+      = form_with(model:[@stock, @order], local:true, class: "order-form")do |f|
         .order-form__name
           %label.order-form__name--label 試合名
           .order-form__name--text
             %span
-              = @schedule.team1.name
+              = @stock.schedule.team1.name
             %span VS
             %span
-              =@schedule.team2.name
+              =@stock.schedule.team2.name
         .order-form__stadium
           %label.order-form__stadium--label 会場
           .order-form__stadium--text
             %span
-              = @schedule.venue.name
+              = @stock.schedule.venue.name
         .order-form__date
           %label.order-form__date--label 試合日
           .order-form__date--text
             %span
-              = @schedule.match_date.strftime('%m月 %d日')
+              = @stock.schedule.match_date.strftime('%m月 %d日')
         .order-form__time
           %label.order-form__time--label 開始
           .order-form__time--text
             %span
-              = @schedule.match_date.strftime('%H:%M')
+              = @stock.schedule.match_date.strftime('%H:%M')
         .order-form__grade
           %label.order-form__grade--label 席種
           .order-form__grade--text

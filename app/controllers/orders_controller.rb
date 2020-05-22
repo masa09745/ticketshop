@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_schedule, only: [:index,:new]
+  before_action :set_stock, only: [:index,:new]
 
   def index
     @order = Order.new
@@ -22,9 +22,8 @@ class OrdersController < ApplicationController
     params.require(:order).permit(:count).merge(user_id: current_user.id, stock_id: params[:stock_id])
   end
 
-  def set_schedule
-    @schedule = Schedule.find(params[:schedule_id])
-    @stock = Stock.find(params[:schedule_id])
+  def set_stock
+    @stock = Stock.find(params[:stock_id])
   end
 
 end
