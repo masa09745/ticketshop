@@ -5,10 +5,9 @@ $(document).on('turbolinks:load', function(){
 
   count.on("change", function() {
     var num = $(this).val();
-    $(this).val(num);
-      var icon = '円'
-			var sumprice = num * price;
-      totalprice.val(sumprice + icon);
+    var icon = '円'
+    var sumprice = num * price;
+    totalprice.val(sumprice + icon);
 
   });
 });
