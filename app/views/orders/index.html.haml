@@ -42,7 +42,8 @@
         .order-form__grade
           %label.order-form__count--label 枚数
           .order-form__count--text
-            = f.text_field :count
+            .form-group
+              =f.select :count, ['1','2','3','4','5'], class:"form-control"
         .order-form__btn
           =f.submit "注文する", class:"btn btn-secondary btn-lg btn-block"
 
