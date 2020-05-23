@@ -57,3 +57,32 @@
   display: flex;
   justify-content: space-between;
 }
+
+.order-form__price{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  input {
+    border: none;
+    outline: none;
+    text-align: right;
+  }
+}
+
+.order-form__count{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-form__sum{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    border: none;
+    outline: none;
+    text-align: right;
+  }
+}

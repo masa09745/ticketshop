@@ -33,17 +33,27 @@
           .order-form__grade--text
             %span
               = @stock.grade
-        .order-form__grade
+        .order-form__price
           %label.order-form__price--label 金額
           .order-form__price--text
+            %input{value: @stock.price, id:"ticket-price", readonly:"readonly" }
             %span
-              = @stock.price
               円
-        .order-form__grade
+        .order-form__count
           %label.order-form__count--label 枚数
           .order-form__count--text
             .form-group
-              =f.select :count, ['1','2','3','4','5'], class:"form-control"
+              =f.select :count, ['1','2','3','4','5'], { include_blank: '枚数を選択してください'}, id: "ticket-count", class: "form-control"
+        .order-form__sum
+          %label.order-form__count--label 合計金額
+          .order-form__count--text
+            %input#jsTotal.input-total{readonly:"readonly"}
+        #order-form__ticket
+          = f.fields_for :tickets do |t|
+            = t.hidden_field :user_id, value: current_user.id, id:"user-id"
+            = t.hidden_field :grade, value: @stock.grade, id:"ticket-grade"
+            = t.hidden_field :price, value: @stock.price, id:"ticket-price"
+
         .order-form__btn
           =f.submit "注文する", class:"btn btn-secondary btn-lg btn-block"
 

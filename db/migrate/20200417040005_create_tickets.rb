@@ -5,8 +5,8 @@ class CreateTickets < ActiveRecord::Migration[5.2]
       t.integer :price, null: false
       t.string :row, null: true
       t.string :number, null: true
-      t.references :schedule, null: false, foreign_key: true
-
+      t.references :order, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
       t.timestamps
     end
   end

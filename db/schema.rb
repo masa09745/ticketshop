@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_18_193121) do
+ActiveRecord::Schema.define(version: 2020_04_17_040005) do
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "count", null: false
@@ -55,10 +55,12 @@ ActiveRecord::Schema.define(version: 2020_05_18_193121) do
     t.integer "price", null: false
     t.string "row"
     t.string "number"
-    t.bigint "schedule_id", null: false
+    t.bigint "order_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["schedule_id"], name: "index_tickets_on_schedule_id"
+    t.index ["order_id"], name: "index_tickets_on_order_id"
+    t.index ["user_id"], name: "index_tickets_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -89,5 +91,6 @@ ActiveRecord::Schema.define(version: 2020_05_18_193121) do
   add_foreign_key "schedules", "teams", column: "team2_id"
   add_foreign_key "schedules", "venues"
   add_foreign_key "stocks", "schedules"
-  add_foreign_key "tickets", "schedules"
+  add_foreign_key "tickets", "orders"
+  add_foreign_key "tickets", "users"
 end
