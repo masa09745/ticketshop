@@ -48,11 +48,12 @@
           %label.order-form__count--label 合計金額
           .order-form__count--text
             %input#jsTotal.input-total{readonly:"readonly"}
-        .order-from__ticket
-          = f.fields_for :tickets do |s|
-            = s.hidden_field :user_id, value: current_user.id
-            = s.hidden_field :grade, value: @stock.grade
-            = s.hidden_field :price, value: @stock.price
+        #order-form__ticket
+          = f.fields_for :tickets do |t|
+            = t.hidden_field :user_id, value: current_user.id, id:"user-id"
+            = t.hidden_field :grade, value: @stock.grade, id:"ticket-grade"
+            = t.hidden_field :price, value: @stock.price, id:"ticket-price"
+
         .order-form__btn
           =f.submit "注文する", class:"btn btn-secondary btn-lg btn-block"
 
