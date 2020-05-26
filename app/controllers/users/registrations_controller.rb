@@ -1,22 +1,17 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  # before_action :configure_sign_up_params, only: [:create]
-  # before_action :configure_account_update_params, only: [:update]
+  require "payjp"
+  Payjp.api_key = Rails.application.credentials.dig(:payjp, :PAYJP_SECRET_KEY)
 
   def new
     @user = User.new
+    session[:user] = @user
   end
 
   def credit
-    session[:name] = user_params[:name]
-    session[:name_kana] = user_params[:name_kana]
-    session[:email] = user_params[:email]
-    session[:password] = user_params[:password]
-    session[:password_confirmation] = user_params[:password_confirmation]
-
-
-    @user = User.new
+    session[:user] = user_params
+    @user = User.new(user_params)
   end
 
   def confirmation

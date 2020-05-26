@@ -5,6 +5,7 @@
     = favicon_link_tag()
     %title Ticketshop
     %script{src: "https://js.pay.jp/", type: "text/javascript"}
+    %script{Payjp.setPublicKey('pk_test_0f209ec3d7c9a45a8d950a55');,type: "text/javascript"}
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
