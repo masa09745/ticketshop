@@ -1,8 +1,5 @@
-# frozen_string_literal: true
-
 class Users::RegistrationsController < Devise::RegistrationsController
   require "payjp"
-  Payjp.api_key = Rails.application.credentials.dig(:payjp, :PAYJP_SECRET_KEY)
 
   def new
     @user = User.new
@@ -15,15 +12,23 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def confirmation
-  end
+    Payjp.api_key = Rails.application.credentials.dig(:payjp, :PAYJP_SECRET_KEY)
 
-  def create
-    @user = User.new(
-      name: session[:name],
-      name_kana: session[:name_kana],
-      email: session[:email],
-      password: session[:password],
-      password_confirmation: session[:password_confirmation]
+    if params[:payjpToken].present?
+      @customer = Payjp::Customer.create(
+        description: 'TicketShop',
+        card: params[:payjpToken],
+      )
+    else
+      render :credit
+      return
+    end
+
+    @user = User.new(session[:user])
+    @user.cards.build(
+      user_id:        @user.id,
+      customer_id:    @customer.id,
+      card_id:        @customer.default_card,
     )
 
     if @user.save
@@ -31,9 +36,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
       session.clear
       session[:id] = @user.id
       sign_in User.find(session[:id]) unless user_signed_in?
-      redirect_to root_path
     else
-      render '/users/signup'
+      redirect_to root_path
     end
   end
 
