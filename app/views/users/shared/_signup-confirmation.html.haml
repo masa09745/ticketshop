@@ -1,8 +1,9 @@
 .signup-form
   %h2.signup-form__title 入力内容確認
   .signup-form__inner
-    = form_with model: @user, url: user_registration_path, method: :post, id: 'new_user', class: 'signup-confirmation', local: true do |f|
-      .signup-confirmation__text
-        登録完了しました。
-      .signup-confirmation__button
-        =f.submit "完了", class:"btn btn-primary btn-lg"
+    .signup-confirmation__text
+      登録完了しました。
+    .signup-confirmation__button
+      =link_to root_path do
+        %span.btn.btn-primary.btn-lg
+          完了

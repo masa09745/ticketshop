@@ -1,46 +1,47 @@
-# frozen_string_literal: true
-
 class Users::RegistrationsController < Devise::RegistrationsController
-  # before_action :configure_sign_up_params, only: [:create]
-  # before_action :configure_account_update_params, only: [:update]
+  require "payjp"
 
   def new
     @user = User.new
+    session[:user] = @user
   end
 
   def credit
-    session[:name] = user_params[:name]
-    session[:name_kana] = user_params[:name_kana]
-    session[:email] = user_params[:email]
-    session[:password] = user_params[:password]
-    session[:password_confirmation] = user_params[:password_confirmation]
-
-
-    @user = User.new
+    session[:user] = user_params
+    @user = User.new(user_params)
   end
 
   def confirmation
-  end
+    Payjp.api_key = Rails.application.credentials.dig(:payjp, :PAYJP_SECRET_KEY)
 
-  def create
-    @user = User.new(
-      name: session[:name],
-      name_kana: session[:name_kana],
-      email: session[:email],
-      password: session[:password],
-      password_confirmation: session[:password_confirmation]
+    if params[:payjpToken].present?
+      @customer = Payjp::Customer.create(
+        description: 'TicketShop',
+        card: params[:payjpToken],
+      )
+    else
+      render :credit
+      return
+    end
+
+    @user = User.new(session[:user])
+    @user.cards.build(
+      user_id:        @user.id,
+      customer_id:    @customer.id,
+      card_id:        @customer.default_card,
     )
 
     if @user.save
       user = @user
+      session.clear
       session[:id] = @user.id
       sign_in User.find(session[:id]) unless user_signed_in?
-      redirect_to root_path
-      session.clear
     else
-      render '/users/signup'
+      redirect_to root_path
     end
   end
+
+
 
   private
   def user_params
