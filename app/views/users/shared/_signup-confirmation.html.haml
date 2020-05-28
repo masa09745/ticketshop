@@ -1,9 +1,10 @@
 .signup-form
-  %h2.signup-form__title 入力内容確認
+  %h2.signup-form__title 登録完了
   .signup-form__inner
-    .signup-confirmation__text
-      登録完了しました。
-    .signup-confirmation__button
-      =link_to root_path do
-        %span.btn.btn-primary.btn-lg
-          完了
+    .signup-confirmation
+      .signup-confirmation__text
+        新規登録完了しました。
+      .signup-confirmation__button
+        =link_to root_path do
+          %span.btn.btn-primary.btn-lg
+            トップページへ
