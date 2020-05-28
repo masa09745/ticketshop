@@ -31,11 +31,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
       card_id:        @customer.default_card,
     )
 
-    if @user.save
+    if @user.save!
       user = @user
       session.clear
       session[:id] = @user.id
       sign_in User.find(session[:id]) unless user_signed_in?
+      redirect_to root_path
     else
       redirect_to root_path
     end
