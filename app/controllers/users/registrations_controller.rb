@@ -1,6 +1,9 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   require "payjp"
 
+  def menu
+  end
+
   def new
     @user = User.new
     session[:user] = @user

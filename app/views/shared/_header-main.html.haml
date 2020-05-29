@@ -13,7 +13,7 @@
               ログアウト
         -else
           .inner-upr__userbox--new
-            =link_to new_user_registration_path, class: "inner-upr__userbox--link" do
+            =link_to users_menu_path, class: "inner-upr__userbox--link" do
               %span.font-red 新規登録
           .inner-upr__userbox--login
             =link_to new_user_session_path, class: "inner-upr__userbox--link" do

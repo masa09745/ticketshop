@@ -3,7 +3,8 @@
 }
 
 .signup-form{
-  width: 700px;
+  max-width: 700px;
+  min-width: 350px;
   margin: 0 auto;
 
   &__title{
@@ -21,6 +22,33 @@
   margin: 0 auto;
   font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic',
   'メイリオ', 'Meiryo', sans-serif;
+}
+
+.signup-menu{
+  width: 350px;
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+
+  &__mail{
+    height: 50px;
+    margin-bottom: 30px;
+    line-height: 50px;
+    border: solid 2px #333333;
+    border-radius: 0.6rem;
+    background-color: #333333;
+    span{
+      color: #ffffff;
+    }
+  }
+
+  &__twitter{
+    height: 50px;
+    line-height: 50px;
+    border: solid 2px #333;
+    border-radius: 0.6rem;
+  }
 }
 
 .form-group{

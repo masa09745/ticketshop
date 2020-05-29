@@ -3,8 +3,10 @@ Rails.application.routes.draw do
     sessions: "users/sessions",
     registrations: "users/registrations"
   }
+    
 
   devise_scope :user do
+    get "users/menu" => "users/registrations#menu"
     get "users/sign_up/credit" => "users/registrations#credit"
     get "users/sign_up/confirmation" => "users/registrations#confirmation"
   end
