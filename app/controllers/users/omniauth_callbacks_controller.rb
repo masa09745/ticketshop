@@ -1,8 +1,8 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-  def twitter
-    callback_for(:twitter)
+  def google_oauth2
+    callback_for(:google)
   end
-
+  
   def callback_for(provider)
     @user = User.find_oauth(request.env["omniauth.auth"])
     if @user.persisted?
