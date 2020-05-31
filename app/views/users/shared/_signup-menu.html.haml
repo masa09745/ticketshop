@@ -7,6 +7,6 @@
         = link_to new_user_registration_path do
           %span メールアドレスで登録
       .signup-menu__twitter
-        = link_to "" do
-          %span Twitterで登録
+        = link_to user_google_oauth2_omniauth_authorize_path, method: :post do
+          %span Googleアカウントで登録
 
