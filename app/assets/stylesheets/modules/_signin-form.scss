@@ -17,6 +17,33 @@
   }
 }
 
+.signin-menu{
+  width: 350px;
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+
+  &__mail{
+    height: 50px;
+    margin-bottom: 30px;
+    line-height: 50px;
+    border: solid 2px #333333;
+    border-radius: 0.6rem;
+    background-color: #333333;
+    span{
+      color: #ffffff;
+    }
+  }
+
+  &__google{
+    height: 50px;
+    line-height: 50px;
+    border: solid 2px #333;
+    border-radius: 0.6rem;
+  }
+}
+
 .signin-user{
   width: 350px;
   margin: 0 auto;

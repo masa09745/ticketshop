@@ -1,0 +1,11 @@
+.signin-form
+  %h2.signin-form__title
+    ログイン
+  .signin-form__inner
+    .signin-menu
+      .signin-menu__mail
+        = link_to new_user_session_path do
+          %span メールアドレスでログイン
+      .signin-menu__google
+        = link_to user_google_oauth2_omniauth_authorize_path, method: :post do
+          %span Googleアカウントでログイン
