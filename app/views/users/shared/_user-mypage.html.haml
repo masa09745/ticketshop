@@ -1,6 +1,16 @@
 .mypage-main
   %h2.mypage-main__title
     ユーザーページ
-  .mypage-main__content
+  .mypage-main__inner
+    -user = current_user.name
+    %p.inner-text ようこそ！ #{user}
     .user-menu
-    = current_user.name
+      = link_to "" do
+        ユーザー情報確認
+      = link_to "" do
+        チケット一覧
+      = link_to "" do
+        クレジットカード追加
+    .user-contents
+
+
