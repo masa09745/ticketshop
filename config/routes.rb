@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     get "users/menu" => "users/registrations#menu"
     get "users/sign_up/credit" => "users/registrations#credit"
     get "users/sign_up/confirmation" => "users/registrations#confirmation"
+    get "users/sign_in/manu" => "users/sessions#menu"
   end
 
   resources :teams, only:[:index, :show]
