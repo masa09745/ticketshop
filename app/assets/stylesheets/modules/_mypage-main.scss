@@ -7,7 +7,13 @@
   min-width: 300px;
   margin: 20px auto 0;
   padding: 30px 60px;
-  font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic',
-  'メイリオ', 'Meiryo', sans-serif;
-  display: flex;
+
+  &__title{
+    font-size: 32px;
+    border-bottom: solid 3px #dddddd;
+  }
+
+  &__content{
+    padding: 10px;
+  }
 }
