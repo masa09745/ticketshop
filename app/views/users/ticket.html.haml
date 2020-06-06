@@ -1,0 +1,15 @@
+.mypage-wrapper
+  = render "/shared/header-main"
+  = render "/users/shared/user-mypage"
+  .mypage-ticket
+    -@tickets.each do |ticket|
+      .hoge
+        =ticket.grade
+      .hogehoge
+        =ticket.price
+      .hoge
+        =ticket.order.stock.schedule.match_date
+      .hoge
+        =ticket.order.stock.schedule.venue.name
+  = render "/shared/footer-main"
+
