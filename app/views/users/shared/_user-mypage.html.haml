@@ -5,7 +5,7 @@
     -user = current_user.name
     %p.inner-text ようこそ！ #{user}
     .user-menu
-      = link_to "" do
+      = link_to "", remote: true do
         ユーザー情報確認
       = link_to "" do
         チケット一覧
