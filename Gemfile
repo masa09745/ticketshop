@@ -80,9 +80,9 @@ gem 'haml-rails'
 gem 'devise'
 gem 'font-awesome-sass', '~> 5.4.1'
 gem "jquery-rails"
-gem "simple_calendar", "~> 2.0"
 gem 'carrierwave'
 gem 'pry-rails'
 gem 'active_hash'
 gem 'bootstrap', '~> 4.4.1'
 gem 'payjp'
+gem "simple_calendar", "~> 2.0"
