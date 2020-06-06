@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
 
   private
   def order_params
-    params.require(:order).permit(:count, tickets_attributes: [:id,:grade,:price,:user_id]).merge(user_id: current_user.id, stock_id: params[:stock_id])
+    params.require(:order).permit(:count, tickets_attributes: [:id,:grade,:price,:user_id,:schedule_id]).merge(user_id: current_user.id, stock_id: params[:stock_id])
   end
 
   def set_stock

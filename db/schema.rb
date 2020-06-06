@@ -73,10 +73,12 @@ ActiveRecord::Schema.define(version: 2020_05_31_144832) do
     t.string "row"
     t.string "number"
     t.bigint "order_id", null: false
+    t.bigint "schedule_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_tickets_on_order_id"
+    t.index ["schedule_id"], name: "index_tickets_on_schedule_id"
     t.index ["user_id"], name: "index_tickets_on_user_id"
   end
 
@@ -110,5 +112,6 @@ ActiveRecord::Schema.define(version: 2020_05_31_144832) do
   add_foreign_key "sns_credentials", "users"
   add_foreign_key "stocks", "schedules"
   add_foreign_key "tickets", "orders"
+  add_foreign_key "tickets", "schedules"
   add_foreign_key "tickets", "users"
 end

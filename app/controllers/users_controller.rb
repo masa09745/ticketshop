@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def ticket
-    @tickets = Ticket.where(user_id: current_user.id).includes(:order)
+    @tickets = Ticket.where(user_id: current_user.id).includes(:schedule)
   end
 
 end

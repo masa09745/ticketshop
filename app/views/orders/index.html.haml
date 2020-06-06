@@ -50,9 +50,11 @@
             %input#jsTotal.input-total{readonly:"readonly"}
         #order-form__ticket
           = f.fields_for :tickets do |t|
-            = t.hidden_field :user_id, value: current_user.id, id:"user-id"
-            = t.hidden_field :grade, value: @stock.grade, id:"ticket-grade"
-            = t.hidden_field :price, value: @stock.price, id:"ticket-price"
+            = t.text_field :user_id, value: current_user.id, id:"user-id"
+            = t.text_field :grade, value: @stock.grade, id:"ticket-grade"
+            = t.text_field :price, value: @stock.price, id:"ticket-price"
+            = t.text_field :schedule_id, value: @stock.schedule_id, id:"ticket-schedule"
+
 
         .order-form__btn
           =f.submit "注文する", class:"btn btn-secondary btn-lg btn-block"
