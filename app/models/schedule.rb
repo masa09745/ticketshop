@@ -4,6 +4,8 @@ class Schedule < ApplicationRecord
   end
 
   has_many :stocks
+  has_many :tickets
+
 
   belongs_to :venue
   belongs_to :team1, class_name: 'Team', foreign_key: 'team1_id'
