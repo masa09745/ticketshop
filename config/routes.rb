@@ -23,7 +23,13 @@ Rails.application.routes.draw do
 
   resources :venues, only: [:index, :show]
 
-  resources :users, only: [:show]
+  resources :users, only: [:show] do
+    member do
+      get 'ticket', to: 'users#ticket'
+      get 'credit', to: 'users#credit'
+    end
+  end
+
 
   root to: "teams#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
